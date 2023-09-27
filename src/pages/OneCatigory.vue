@@ -48,14 +48,14 @@
                
                 </div>
             </div>
-        <div class="col-11">
+        <div class="col-12">
             
             <ul v-if="showlist" class="row list">
                    <li v-for="p in products" :key="p.id">
-                    <div class="card1">
-                        <img :src="p.image_190x230" alt="" class="img"><h3>{{ p.product_name }}</h3>
-                    </div>
-                   </li>
+                    
+                        <Cart4 :img="p.image_190x230" :title="p.product_name" :price="p.price"/>
+                    
+                  </li>
                 </ul>
                     <div class="cardgrid" v-else>
                     <div  v-for="p in products" :key="p.id">
@@ -70,11 +70,12 @@
 <script >
 import { useMyStore } from '../store';
 import Cart from '../components/Cart.vue';
+import Cart4 from '../components/Cart4.vue';
 import SideList from '../components/SideList.vue';
 export default{
     props:['id'],
     components:{
-    Cart,SideList
+    Cart,SideList,Cart4
 },
 data(){
 return{
@@ -110,8 +111,6 @@ const catigory=catigories.find(c=>c.id===Number(this.id))
     height: 400px
 }
 .card{
-    height: 300px;
-    width: 200px;
 }
 .card-img{
     height:150px;
@@ -153,6 +152,7 @@ font-size: 13px;
 .list{
 list-style:none;
 margin-left: auto;
+width: 100%;
 }
 .card1{
 display: flex;

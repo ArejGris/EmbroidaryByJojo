@@ -1,5 +1,5 @@
 <template>
-<div class="card d-flex">
+<div class="card ">
 
 <div class="card-body ">
     <div class="img">
