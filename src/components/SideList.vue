@@ -8,7 +8,7 @@
                     <div id="item0" class="collapse">
                         <ul>
                             <li v-for="cat in catigries" :key="cat.id">
-                                <router-link :to="`catigories/${cat.id}`">
+                                <router-link :to="`/catigories/${cat.id}`">
                                 
                                     <h6>{{ cat.title }}</h6><span>{{ cat.number }}</span>
                                 </router-link>
@@ -66,7 +66,7 @@ export default{
 computed:{
     catigries(){
         const store=useMyStore()
-        const products=store.products
+        const products=store.allproducts
         const cats=store.categories
         const catnumber=cats.map(cat=>{
             var count=0

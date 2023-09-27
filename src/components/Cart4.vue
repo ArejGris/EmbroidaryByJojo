@@ -8,7 +8,7 @@
     </div>
 <ul class="content">
     <li>${{ price }}</li>
-    <li>{{ title }}</li>
+    <li class="title">{{ title }}</li>
     <li><i class="fa fa-star"></i>
         <i class="fa fa-star"></i>
         <i class="fa fa-star"></i>
@@ -47,6 +47,7 @@ props:['img','title','price']
     position: relative;
     width: 130px;
 }
+
 .img span{
     position: absolute;
     padding: 5px 10px;
@@ -60,7 +61,7 @@ props:['img','title','price']
 }
 .img img{
     height:150px;
-    width: 130px;
+    width: 100%;
 }
 .icons{
     list-style: none;
@@ -85,5 +86,24 @@ props:['img','title','price']
 .content li i.fa{
     font-size: 13px;
     color: gray;
+}
+.title{
+    white-space: nowrap;
+}
+.content li{
+    white-space: nowrap;
+}
+@media  screen and (max-width:340px) {
+    .img{
+        width: 100px;
+    }
+    .title{
+        font-size: 9px;
+    }
+   
+    .content li i.fa{
+        font-size: 6px;
+    }
+
 }
 </style>

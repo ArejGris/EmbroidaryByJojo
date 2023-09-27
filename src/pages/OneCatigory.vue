@@ -3,11 +3,11 @@
 <v-divider></v-divider>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-4">
+        <div class="col-md-4 col-lg-4">
            <SideList/>
 
         </div>
-        <div class="col-8">
+        <div class="col-md-8 col-lg-8">
             <img src="../assets/img.jpg" alt="" class="img">
             
 <v-spacer></v-spacer>
@@ -16,37 +16,35 @@
     </div>
        <div class="row d-flex flex-column justify-content-center align-items-center">
         <div class="col-12 cc">
-             <div class=" iconsec " >
                 <div class="icons">
-                <h3>Sort By</h3>
-                <div class="dropdown">
-  <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Show by 24
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Show by 12</a>
-    <a class="dropdown-item" href="#">Show by 16</a>
-    <a class="dropdown-item" href="#">Show by 20</a>
-    <a class="dropdown-item" href="#">Show by 24</a>
-  </div>
-</div>
-<div class="dropdown">
-  <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Newest
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Oldest</a>
-    <a class="dropdown-item" href="#">Top rated</a>
-    <a class="dropdown-item" href="#">Top selling</a>
-  </div>
-</div>
-               <div>
-                <i class="fa fa-square" @click="showlist=false"></i></div>
-                <div>
-                <i class="fa fa-bars" @click="showlist=true"></i></div>
+                    <div class="iconleft">
+                        <h3>Sort By</h3>
+                           <form class="form-group">
+                               <select class="form-control">
+                           <option value="12">Show by 12</option>
+                            <option value="16">Show by 16</option>
+                             <option value="20">Show by 20</option>
+                              <option value="24">Show by 24</option>
+                           </select>
+                        </form>
+                    </div>
+                    <div class="iconright">
+                        <form action="#"> 
+                            <select class="form-control" v-model="sort" >
+                               <option value="1">Newest</option>
+                               <option value="2">Oldest</option>
+                               <option value="20">Top Selled</option>
+                               <option value="24">Top rated</option>
+                           </select>
+                       </form>
+                           <div class="form-group"><span class="mdi mdi-name mdi-grid"  @click="showlist=false"></span></div>
+                         <div class="form-group"><span class="mdi mdi-name mdi-format-list-bulleted" @click="showlist=true"></span></div>
+
+                    </div>
+                
+               
             </div>
                
-                </div>
             </div>
         <div class="col-12">
             
@@ -79,23 +77,43 @@ export default{
 },
 data(){
 return{
-    showlist:true
+    sort:1,
+    showlist:true,
+    products:[]
 }
 },
+
     computed:{
         catigory(){
             const store=useMyStore()
 const catigories=store.categories
 const catigory=catigories.find(c=>c.id===Number(this.id))
             return catigory
-        },
-        products(){
+        }
+    },
+methods:{
+        computeproducts(sort){
+            
             const store=useMyStore()
             
-            const products=store.products
-            const cproducts=products.filter(p=>Number(p.category_id)===Number(this.id))
-            return cproducts
+            const products=store.allproducts.filter(p=> Number(p.category_id)===Number(this.id))
+            var p
+            if(sort==1){
+            p=products.sort((a,b)=>{return (Number(a.id) - Number(b.id))})}
+            
+            if(sort==2){
+            p=products.sort((a,b)=>{return (Number(b.id)- Number(a.id))})}
+         this.products=p
 
+        }
+    },
+    mounted(){
+this.computeproducts(this.sort)
+    },
+    watch:{
+        sort(newvl){
+            this.computeproducts(newvl)
+            
         }
     }
       
@@ -103,7 +121,7 @@ const catigory=catigories.find(c=>c.id===Number(this.id))
 
 </script>
 <style scoped>
-.iconsec{
+.icons{
     padding:0px 1rem;
 }
 .img{
@@ -129,6 +147,12 @@ font-size: 13px;
 .icons div{
     cursor: pointer;
 }
+.iconleft,.iconright{
+    display: flex;
+}
+.iconright div{
+margin-left: 10px;
+}
 .cc{
     margin-top: 2rem;
     height: 59px;
@@ -137,7 +161,7 @@ font-size: 13px;
     .icons .dropdown .btn{
         font-size: 10px;
     }
-    .iconsec{
+    .icons{
         margin-right: 17px;
         margin-top: 10px;
     }
@@ -172,5 +196,11 @@ align-items: center;
     grid-template-columns: repeat(4,1fr);
     gap: 10px;
 
+}
+@media screen and (max-width:500px){
+    ul{
+        padding-left: 0px;
+    }
+    
 }
 </style>

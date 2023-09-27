@@ -36,15 +36,20 @@ a img{
     width: 20px;
   }
 }
-@media screen and (max-width:350px){
+@media screen and (max-width:377px){
   .nav-item{
-    margin: 0px ;
+    margin: 5px ;
   }
   a img{
     width: 20px;
   }
   .nav-link{
     padding: 5px;
+  }
+}
+@media screen and (max-width:330px){
+  .nav-item{
+    margin: 0px;
   }
 }
 </style>

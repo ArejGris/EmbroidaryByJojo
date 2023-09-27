@@ -19,8 +19,8 @@
                             <select class="form-control" v-model="sort">
                                <option value="1">Newest</option>
                                <option value="2">Oldest</option>
-                               <option value="20">Most Selled</option>
-                               <option value="24">Show by 24</option>
+                               <option value="20">Top Selled</option>
+                               <option value="24">Top rated</option>
                            </select>
 
                            </div>
