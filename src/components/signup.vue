@@ -45,6 +45,7 @@
     position: relative;
 }
 .form-group input[type="text"]{
+    background-color: white;
     width: 100%;
     z-index: -1;
     padding-left: 2rem;

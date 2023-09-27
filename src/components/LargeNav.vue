@@ -65,6 +65,8 @@
 }
 #pencil{
     transform: rotateZ(90deg);
+    margin-right: 1px;
+    margin-bottom: 5px;
 }
 .img-svg{
     width: 30px;

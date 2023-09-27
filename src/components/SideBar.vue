@@ -37,8 +37,8 @@ export default{
         z-index: 999;
         background-color: white;
         position: fixed;
-        top:43%;
-        left: 2rem;
+        top:38%;
+        left: .8rem;
         width: 500px;
     }
     

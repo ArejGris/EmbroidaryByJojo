@@ -110,6 +110,7 @@ input{
     padding: 5px 10px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 @media screen and (max-width: 990px){
     .nav-search{
