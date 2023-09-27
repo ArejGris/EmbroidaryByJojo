@@ -12,9 +12,22 @@
            
            <ul class="list-icon">
            
-                   <li>   <h3>Sort By</h3></li>
-                   <li>
-                       <form action="">
+                   <li id="sort"> 
+                    <h3>Sort By</h3>
+                    <form action=""> 
+                           <div class="form-group">
+                            <select class="form-control" v-model="sort">
+                               <option value="1">Newest</option>
+                               <option value="2">Oldest</option>
+                               <option value="20">Most Selled</option>
+                               <option value="24">Show by 24</option>
+                           </select>
+
+                           </div>
+                       </form>
+                    </li>
+                   <li id="fromicon">
+                       <form action="" id="form">
                            <div class="form-group">
                                <select class="form-control">
                            <option value="12">Show by 12</option>
@@ -24,29 +37,24 @@
                            </select>
 
                            </div>
-                       </form>
+                           <div class="form-group"><span class="mdi mdi-name mdi-grid"  @click="showlist=false"></span></div>
+                         <div class="form-group"><span class="mdi mdi-name mdi-format-list-bulleted" @click="showlist=true"></span></div>
+                        </form>
                       
                    </li>
-                   <li>
-                       
-
-                   </li>
-                   <li @click="showlist=false"><span class="mdi mdi-name mdi-grid"></span></li>
-                   <li @click="showlist=true"><span class="mdi mdi-name mdi-format-list-bulleted"></span></li>
                    
            </ul>
           
            <div class="list-product">
                <ul v-if="showlist" class="row list">
                   <li v-for="p in products" :key="p.id">
-                   <div class="card1">
-                       <img :src="p.image_190x230" alt="" class="img"><h6>{{ p.product_name }}</h6>
-                   </div>
+                    
+                   <Cart4 :img="p.image_190x230" :title="p.product_name" :price="p.price" />
                   </li>
                </ul>
                    <div class="cardgrid" v-else>
                    <div  v-for="p in products" :key="p.id">
-                   <Cart :img="p.image_190x230" :price="p.price" :product-name="p.product_name"/>
+                   <Cart2 :img="p.image_190x230" :price="p.price" :product-name="p.product_name"/>
                    </div>
                    </div>
            </div>
@@ -65,18 +73,38 @@ section{
 }
 ul{
     list-style: none;
+}
+.list-icon{
+
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+#form{
+    display: flex;
+}
+#form .form-group{
+    margin-left: 10px;
 }
 .products .list-icon{
     margin-top: 1rem;
-    width: 100vw;
+    width: 100%;
     padding: 0px 1rem;;
 }
 .list-icon ul{
     display: flex;
     justify-content: space-between;
+}
+.list-icon ul li {
+    cursor: pointer;
+}
+ #sort{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
 }
 .list-icon ul li i{
     margin-left: 10px;
@@ -97,7 +125,6 @@ ul{
 }
 .list{
 list-style:none;
-margin-left: 40%;
 }
 .card1{
 display: flex;
@@ -126,6 +153,10 @@ display: flex;
   }  
 }
 @media screen and (max-width: 530px) {
+    #formicon{
+        flex:0 100%;
+        order:1;
+    }
     .list-icon li h3{
         font-size: 19px;
         white-space: nowrap;
@@ -163,7 +194,6 @@ display: flex;
     }
     .products .list-icon li{
   
-    margin-left: 20px;
 }
 .products .list-icon h3{
 font-size: 17px;
@@ -173,7 +203,6 @@ font-size: 17px;
 @media screen and (min-width:530px) {
     .list-icon li{
   
-    margin-left: 10px;
     
 }
 
@@ -184,24 +213,20 @@ font-size: 17px;
 <script >
 import { useMyStore } from '../store';
 import Cart from '../components/Cart.vue';
-import Cart2 from '../components/Cart2.vue'
+import Cart2 from '../components/Cart2.vue';
+import Cart4 from '../components/Cart4.vue';
 import SideList from '../components/SideList.vue';
 export default{
     props:['id'],
     components:{
-    Cart,SideList,Cart2
+    Cart,SideList,Cart2,Cart4
 },
 data(){
 return{
     showlist:true,
-  sort:1
+  sort:1,
+  products:[]
 }
-},
-methods:{
-    fun(){
-        console.log("hhhh")
-        this.sort=2
-    }
 },
     computed:{
         catigory(){
@@ -210,18 +235,31 @@ const catigories=store.categories
 const catigory=catigories.find(c=>c.id===Number(this.id))
             return catigory
         },
-        products(){
+     
+    },
+    methods:{
+        computeproducts(sort){
+            
             const store=useMyStore()
             
-            const products=store.products
+            const products=store.allproducts
             var p
-            if(this.sort===1){
-            p=products.sort((a,b)=>{return (a.id>b.id)})}
+            if(sort==1){
+            p=products.sort((a,b)=>{return (Number(a.id) - Number(b.id))})}
             
-            if(this.sort===2){
-            p=products.sort((a,b)=>{return (a.id<b.id)})}
-            return products
+            if(sort==2){
+            p=products.sort((a,b)=>{return (Number(b.id)- Number(a.id))})}
+         this.products=p
 
+        }
+    },
+    mounted(){
+this.computeproducts(this.sort)
+    },
+    watch:{
+        sort(newvl){
+            this.computeproducts(newvl)
+            
         }
     }
       

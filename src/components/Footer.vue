@@ -110,8 +110,6 @@ ul li i{
 .about{
     color: rgb(194, 193, 193);
     text-align: left;
-    height: 300px;
-    width: 300px;
     overflow: hidden;
     margin-left: 4rem;
     font-size: 15px;

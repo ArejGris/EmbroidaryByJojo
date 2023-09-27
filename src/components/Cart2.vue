@@ -1,8 +1,8 @@
 <template>
-    <div class="card" @mousemove="handlehover(true)"  @mouseleave="handlehover(false)">
+    <div class="card" @mousemove="handlehover(1)"  @mouseleave="handlehover(0)">
         <div class="card-img" >
             <div class="discount">out of stock</div>
-            <div id="icon" class="icon " v-if="show">
+            <div id="icon" class="icon " v-if="this.show===1">
                 <ul>
                     <li>
                 <i class="fa-solid fa-scale-balanced"></i>
@@ -56,11 +56,14 @@ productName:{
     required:false
 }
 },
-    data:()=>({
-show:false
-    }),
+   data(){
+return{
+    show:0
+}
+   },
     methods:{
        handlehover(value){
+        
 this.show=value
 
        }
@@ -72,23 +75,24 @@ this.show=value
 <style scoped>
 .card{
     padding: 0;
-    width: 170px;
-    height: 240px;
+    width: 150px;
+    height: 270px;
 margin-bottom: .7rem;}
     .card-body{
-        margin-top: 70%;
+        margin-top: 100%;
 
     }
 
 .card-img{
     overflow: hidden;
-    height: 140px;
+    height: 150px;
     position: absolute;
     padding:0px;
     top:0
 }
 .card-img img{
-    top:10%
+    margin-top: 10%;
+    height: 150px;
 }
 .old-price{
     text-decoration: line-through;
@@ -136,7 +140,7 @@ img:hover{
     position: absolute;
     text-align: right;
     margin-left: auto;
-    z-index: 1;
+    z-index: 999;
 
 }
 .icon.hide{
