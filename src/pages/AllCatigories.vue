@@ -1,10 +1,10 @@
 <template>
     
-        <h3>All Catigories</h3>
+        <div class="title"><h3>All Catigories</h3></div>
     <div class="divider"> </div>
     <div class="container-fluid">
-        <div class="row d-flex justify-content-center align-items-center gap-1" >
-            <div class="col-10 col-sm-5 col-lg-3 col-md-4 " v-for="cat in catigories" :key="cat.id">
+        <div class="row " >
+            <div class=" col-lg-4 col-md-6 " v-for="cat in catigories" :key="cat.id">
                 <div class="card d-flex">
                     <h3>{{cat.title}}</h3>
                     <router-link :to="`/catigories/${cat.id}`">
@@ -28,11 +28,19 @@ const catigories=computed(()=>{
 
 </script>
 <style scoped>
+.title{
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+}
 section{
     width:100vw ;
     height:auto ;
 }
 .divider{
+    margin: 1rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
     width: 100%;
     height: 1px;
     background-color: rgba(197, 199, 201, 0.904);
@@ -42,10 +50,13 @@ section{
 }
 .card{
     display: flex;
+    padding-left: 10px;
+    padding-right: 1rem;
 }
 .card h3{
     text-align: left;
-    font-size: 24px;
+    font-size: 18px;
+    color: gray;
     font-weight: 600;
 }
 .card a{

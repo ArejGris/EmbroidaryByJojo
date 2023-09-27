@@ -2,6 +2,12 @@
 import { useMyStore } from '../store';
 export default{
     props:['sidebar'],
+    emits:['clickme'],
+    methods:{
+        clickme(){
+            this.$emit('clickme')
+        }
+    },
     computed:{
        catigories(){
     const store=useMyStore()
@@ -13,7 +19,7 @@ export default{
 </script>
 <template>
 
-<div class="sidebar">
+<div class="sidebar" @click="clickme">
             <ul class="sidelist">
                 <li v-for="cat in catigories" :key="cat.id">
                     <span data-v-3b91b666="" class="mdi mdi-view-dashboard-outline mdi-18px"></span> 

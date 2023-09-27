@@ -113,7 +113,7 @@ ul li i{
     overflow: hidden;
     margin-left: 4rem;
     font-size: 15px;
-    margin-top: 2rem;
+    margin-top: 10px;
 }
 .about span{
     font-size: 18px;
@@ -121,6 +121,7 @@ ul li i{
 }
 h5{
     font-weight: 600;
+    color:white
 }
 .divider{
     width: 100%;

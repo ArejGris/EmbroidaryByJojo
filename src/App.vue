@@ -14,7 +14,7 @@
     <Navbar2  />
     <LargeNav @send="toggle" class="hide"/>
     <!-- <NavbarLargeScreen @send="toggle" v-if="wideOrNarrow"  /> -->
-    <SideBar v-if="show" />
+    <SideBar v-if="show" @clickme="show=false" />
 
     <router-view ></router-view>
     

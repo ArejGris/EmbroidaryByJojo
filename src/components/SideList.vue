@@ -8,7 +8,10 @@
                     <div id="item0" class="collapse">
                         <ul>
                             <li v-for="cat in catigries" :key="cat.id">
-                                <h6>{{ cat.title }}</h6><span>{{ cat.number }}</span>
+                                <router-link :to="`catigories/${cat.id}`">
+                                
+                                    <h6>{{ cat.title }}</h6><span>{{ cat.number }}</span>
+                                </router-link>
 
                             </li>
                     </ul>
@@ -80,6 +83,9 @@ computed:{
 }
 </script>
 <style scoped>
+a{
+    text-decoration: none;
+}
 .list-group li.list-group-item{
     padding: 1rem;
 }
@@ -104,7 +110,7 @@ border: 1px solid rgba(128, 128, 128, 0.253);
 border-radius: 3px;
 margin-left: 10px;
 }
-#item0 ul li {
+#item0 ul li a{
     display: flex;
 
 }
@@ -113,8 +119,8 @@ margin-left: 10px;
 }
 #item0 ul li span{
     color: red;
-    padding: 0px 2px;
-    border: 1px solid red;
-    border-radius: 100%;
+    padding: 0px 10px;
+    background-color: rgba(255, 0, 0, 0.192);
+    border-radius:13px;
 }
 </style>
