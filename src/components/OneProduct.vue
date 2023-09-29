@@ -94,14 +94,14 @@ Cart,Cart2
         },
         product(){
             const store=useMyStore()
-            const products=store.products
+            const products=store.thallproducts
             const p=products.find(prod=>
             prod.id==this.id)
             return p
         },
         relatedProduct(){
             const store=useMyStore()
-            const products=store.products
+            const products=store.thallproducts
             const catigory_id=this.product.category_id
           
             const relatedProduct=products.filter(prod=> prod.category_id===catigory_id)

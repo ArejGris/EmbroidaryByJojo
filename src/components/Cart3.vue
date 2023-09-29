@@ -201,6 +201,20 @@ a{
 }
 @media screen and (max-width:425px){
     .card{
+        width:180px;
+        height: 290px;
+    }
+    
+}
+@media screen and (max-width:370px){
+    .card{
+        width:160px;
+        height: 290px;
+    }
+    
+}
+@media screen and (max-width:325px){
+    .card{
         width:140px;
         height: 290px;
     }

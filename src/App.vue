@@ -17,7 +17,7 @@
     <SideBar v-if="show" @clickme="show=false" />
 
     <router-view ></router-view>
-    
+    <div class="arrow bg-warning" @click="gototop"><i class="fa fa-angle-up"></i></div>
     <Footer/>
    
     <NavBar @sendaction="action" class="hide1"/>
@@ -53,6 +53,9 @@ const deleteaction=()=>{
     navdrw2.value=false
     show.value=false
 }
+const gototop=()=>{
+    window.scrollTo(0,0)
+}
 onMounted(()=>{
 const wide=window.innerWidth
 if(Number(wide)>800){
@@ -66,6 +69,25 @@ else{
 
 </script>
 <style scoped>
+.arrow{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    color:white ;
+    position: fixed;
+    z-index: 9999999;
+    bottom:10%;
+    right:10%;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow:hover{
+font-size: 28px;
+}
 .nav2{
     top:0;
     position: fixed;
@@ -107,6 +129,9 @@ nav.hide1{
     display: none;
 }
 @media screen and (max-width: 600px) {
+    .arrow{
+        bottom:15%
+    }
     nav.hide{
         display: none;
     }

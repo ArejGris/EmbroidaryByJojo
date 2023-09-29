@@ -48,13 +48,18 @@
            <div class="list-product">
                <ul v-if="showlist" class="row list">
                   <li v-for="p in products" :key="p.id">
-                    
+                    <router-link :to="`/product/${p.id}`">
+                        
                    <Cart4 :img="p.image_190x230" :title="p.product_name" :price="p.price" />
+                    </router-link>
+                    
                   </li>
                </ul>
                    <div class="cardgrid" v-else>
                    <div  v-for="p in products" :key="p.id">
+                    <router-link :to="`/product/${p.id}`">
                    <Cart2 :img="p.image_190x230" :price="p.price" :product-name="p.product_name"/>
+                    </router-link>
                    </div>
                    </div>
            </div>

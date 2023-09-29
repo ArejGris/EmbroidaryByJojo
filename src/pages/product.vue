@@ -28,10 +28,17 @@ h6{
 }
 @media screen and (max-width:370px){
   .slick-slider1 li{
-    padding: 0;
+  padding: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 150px;
+}
+}
+@media screen and (max-width:300px){
+  .slick-slider1 li{
+padding: 1px;
   margin-left: 2px;
   margin-right: 2px;
-  width: 150px;
 }
 }
 .slick-slider1 .slick-slide{

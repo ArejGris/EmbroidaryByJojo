@@ -37,8 +37,10 @@ export default{
      mounted(){
     
         $(this.$refs.slider).slick({
+            
             slidesToShow: 5,
             slidesToScroll: 2,
+            arrow:false,
             responsive:[
                { breakpoint: 1024,
                 settings: { 
