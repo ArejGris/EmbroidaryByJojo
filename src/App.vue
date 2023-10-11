@@ -1,5 +1,3 @@
-
-
 <template>
     <TopNav/>
     <Transition name="nav1">
