@@ -1,28 +1,30 @@
 <template>
-    <section>
-        <div class="browse">
+    <div class="container">
+        <div class="row">
+<div class="col-12">
+    <ul class="slick-slider" ref="slider2" id="slider">
+<li v-for="c in this.categories" :key="c.id">
+        <div class="card">
+     
+    <router-link :to="`/catigories/${c.id}`">
+     <img :src="c.popular_image" alt="" class="image" ></router-link>
+         
+     <div class="title">
+         {{ c.title }}
 
-            <h3>Popular Products</h3>  <router-link to="/catigories"><h3>Browse All Catigories</h3><span class="icon mdi mdi-name mdi-arrow-right"></span></router-link>
+     </div>
         </div>
-        <v-divider></v-divider>
-        <ul class="slick-slider" ref="slider">
-            <li v-for="c in this.categories" :key="c.id">
-                <router-link :to="`/catigories/${c.id}`">
-                    <div class="card">
-                 
-                 <img :src="c.popular_image" alt="" class="image">
-                     
-                 <div class="title">
-                     {{ c.title }}
- 
-                 </div>
-                    </div>
 
-                </router-link>
-                
-            </li>
-        </ul>
-    </section>
+    
+</li>
+</ul>
+
+</div>
+
+
+        </div>
+       
+    </div>
 </template>
 
 <script>
@@ -30,15 +32,14 @@ import 'slick-carousel/slick/slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import $ from "jquery"
-import { useMyStore } from '../store'
 export default{
-    props:['categories'],
+    props:['categories','title'],
   
      mounted(){
-    
-        $(this.$refs.slider).slick({
+        document.getElementById('slider').style.width="100%"
+        $(this.$refs.slider2).slick({
             
-            slidesToShow: 5,
+            slidesToShow: 6,
             slidesToScroll: 2,
             arrow:false,
             responsive:[
@@ -66,21 +67,50 @@ export default{
 }
 </script>
 <style scoped>
-.card{
-    width: 200px;
-    height: 200px;
+.slick-slider{
+    width: 100%;
+}
+.slick-slide{
+    width: auto;
+}
+.card{height: 150px;
     padding: 0;
     position: relative;
+   
+}
+.col-12{
+    width: 100%;;
+}
+.card:hover{
+    border: 1px solid red;
+}
+.card:hover .title{
+    color: red;
 }
 .image{
     width: 100%;
-    height: 90%;
+    height: 100%;
 }
+img{
+    width: 190px;
+}
+a{
+    height: 100%;
+    background-color: #fcb80010;
+}
+
 .title{
     position: absolute;
     top: 80%;
     width: 100%;
     text-align: center;
+    font-weight: 500;
+    padding-bottom: 1rem;
+}
+.category-slider a span{
+    overflow: hidden;
+    white-space: nowrap;
+
 }
 .browse{
     padding: 0px 1rem;

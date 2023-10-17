@@ -8,7 +8,7 @@
                 <div class="card d-flex">
                     <h3>{{cat.title}}</h3>
                     <router-link :to="`/catigories/${cat.id}`">
-                    <img src="../assets/img.jpg" alt="" class="img">
+                    <img src="../assets/default-image-970x400.png" alt="" class="img">
                     </router-link>
                 </div>
             </div>

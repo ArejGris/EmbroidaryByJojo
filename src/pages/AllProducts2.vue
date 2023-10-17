@@ -58,7 +58,7 @@
                    <div class="cardgrid" v-else>
                    <div  v-for="p in products" :key="p.id">
                     <router-link :to="`/product/${p.id}`">
-                   <Cart2 :img="p.image_190x230" :price="p.price" :product-name="p.product_name"/>
+                   <Cart3 :img="p.image_190x230" :price="p.price" :product-name="p.product_name"/>
                     </router-link>
                    </div>
                    </div>
@@ -73,6 +73,9 @@
     
 </template>
 <style scoped>
+a{
+    text-decoration: none;
+}
 section{
     padding: 1rem;
 }
@@ -216,15 +219,14 @@ font-size: 17px;
 
 </style>
 <script >
-import { useMyStore } from '../store';
-import Cart from '../components/Cart.vue';
-import Cart2 from '../components/Cart2.vue';
+import { useMyStore2 } from '../store2';
+import Cart3 from '../components/Cart3.vue';
 import Cart4 from '../components/Cart4.vue';
 import SideList from '../components/SideList.vue';
 export default{
     props:['id'],
     components:{
-    Cart,SideList,Cart2,Cart4
+   SideList,Cart3,Cart4
 },
 data(){
 return{
@@ -235,7 +237,7 @@ return{
 },
     computed:{
         catigory(){
-            const store=useMyStore()
+            const store=useMyStore2()
 const catigories=store.categories
 const catigory=catigories.find(c=>c.id===Number(this.id))
             return catigory
@@ -245,7 +247,7 @@ const catigory=catigories.find(c=>c.id===Number(this.id))
     methods:{
         computeproducts(sort){
             
-            const store=useMyStore()
+            const store=useMyStore2()
             
             const products=store.allproducts
             var p

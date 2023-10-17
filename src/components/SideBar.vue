@@ -50,6 +50,7 @@ export default{
     text-align: left;
 }
 .sidelist li{
+    border-bottom: none;
     border: .1px solid rgba(128, 128, 128, 0.295);
     padding: .5rem 2rem;
     width: 100%;

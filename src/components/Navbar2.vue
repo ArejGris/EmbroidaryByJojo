@@ -104,7 +104,7 @@ input{
     cursor: pointer;
 }
 .nav-search{
-    width: 50%;
+    width: 40%;
     border: 1px solid rgba(0, 0, 0, 0.226);
     border-radius: 5px;
     padding: 5px 10px;

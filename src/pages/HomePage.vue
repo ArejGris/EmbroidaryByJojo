@@ -1,53 +1,86 @@
 <template>
 <section>
-    <catigories/>
-    <CatigoryList :categories="this.popularCat"/>
-    <product :products="this.todaydeals" page="Today Deals"></product>
+            <catigories/>
+            <div class="browse">
+                <h6>Popular Categories</h6>
+                <router-link class="t2" to="/categories">more categories<span class="icon mdi mdi-name mdi-arrow-right"></span></router-link>
+</div>
+    <CatigoryList :categories="this.popularCat" />
+    <product :products="this.todaydeals2" page="Today Deals"></product>
     
     
-    <product :products="this.Acceccoirs" page="Accessoirs"></product>
-    <CatigoryList :categories="this.topCat"/>
+    <product2 :products="this.Acceccoirs" page="Accessoirs"></product2>
+    
+    <product :products="this.bestproducts" page="Best Selling Products"/>
+    <div class="cats">
+<div class="t">Top Categories of the mounth</div>
+        <CatigoryList :categories="this.topCat"/>
+    </div>
     <product :products="this.latestProducts" page="Latest Products"></product>
+       
 </section>
 </template>
 <script>
 import product from './product.vue';
+import product2 from './product2.vue';
 import catigories from './catigories.vue';
 import CatigoryList from '../components/CatigoryList.vue';
 import { useMyStore } from '../store';
+import { useMyStore2 } from '../store2';
 export default{
     components:{
-        product,catigories,CatigoryList
+        product,catigories,CatigoryList,product2
     },
     computed:{
 topCat(){
-const store=useMyStore()
+const store=useMyStore2()
 return store.top_categories
 },
 popularCat(){
-    const store=useMyStore()
-return store.popular_categories
+    const store2=useMyStore2()
+return store2.popularcategories
 },
-todaydeals(){
+todaydeals2(){
     
-const store=useMyStore()
-return store.today_deals
+const store2=useMyStore2()
+return store2.todaydeals
 },
 bestproducts(){
     
-const store=useMyStore()
+const store=useMyStore2()
 return store.best_selling_product
 },
 Acceccoirs(){
     
-const store=useMyStore()
+const store=useMyStore2()
 return store.Accessoires
 },
 latestProducts(){
     
-const store=useMyStore()
+const store=useMyStore2()
 return store.latest_products
 }
     }
 }
 </script>
+<style scoped>
+.cats{
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.123);
+    width: 100vw;
+}
+.cats .t{
+    margin: 10px auto;
+    font-size: 19px;
+    font-weight: 600;
+}
+.browse{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+</style>

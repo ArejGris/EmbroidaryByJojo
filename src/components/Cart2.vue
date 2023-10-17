@@ -2,7 +2,8 @@
     <div class="card" @mousemove="handlehover(1)"  @mouseleave="handlehover(0)">
         <div class="card-img" >
             <div class="discount">out of stock</div>
-            <div id="icon" class="icon " v-if="this.show===1">
+            <Transition name="fade">
+                <div id="icon" class="icon " v-if="this.show===1">
                 <ul>
                     <li>
                 <i class="fa-solid fa-scale-balanced"></i>
@@ -13,6 +14,9 @@
 
                 </ul>
             </div>
+
+            </Transition>
+           
             <img :src="img" :url="img" alt="">
         </div>
         <div class="card-body">
@@ -75,17 +79,21 @@ this.show=value
 <style scoped>
 .card{
     padding: 0;
-    width: 150px;
+    width: 190px;
     height: 270px;
 margin-bottom: .7rem;}
     .card-body{
-        margin-top: 100%;
+        position: absolute;
+        top:150px;
+        left:0;
+        width: 100%;
+        height: 50%;
 
     }
 
 .card-img{
     overflow: hidden;
-    height: 150px;
+    height: 190px;
     position: absolute;
     padding:0px;
     top:0
@@ -151,8 +159,8 @@ img:hover{
     list-style: none;
 }
 .icon ul li{
-    width:40px;
-    height: 40px;
+    width:30px;
+    height: 30px;
     text-align: center;
     padding: 5px;
     background: white;
@@ -194,5 +202,14 @@ a{
         height: 290px;
     }
     
+}
+.fade-enter-from{
+transform:translateX(100%);
+}
+.fade-enter-to{
+    transform: translateX(0);
+}
+.fade-enter-active{
+    transition: all .3s ease-in-out;
 }
 </style>

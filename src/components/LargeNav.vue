@@ -1,20 +1,14 @@
 <template>
     <nav class="navbar navbar-expand-sm  navbar-light bg-warning" id="nav">
         <div class="container">
-            <!-- Replace this with your own logo -->
-            <a class="navbar-brand" href="#" @click="send">
+         
+                <a class="navbar-brand b1" href="#" @click="send">
                 <img src="../assets/format-list-bulleted-square.svg" alt="" class="img-svg">
-                All Categories</a>
-
-            <!-- Toggler/collapsibe Button for small screens -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myList"
-                aria-controls="myList" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                ALL CATEGORIES</a>
 
             <!-- List of links -->
-            <div class="collapse navbar-collapse" id="myList">
-                <ul class="navbar-nav">
+            <ul  class="navbar-nav" id="myList">
+                
                     <li class="nav-item active">
                         <router-link to="/" class="nav-link" href="#">Home</router-link>
                     </li>
@@ -45,8 +39,8 @@
                                  </div>
                       </div>
                     </li>
-                </ul>
-            </div>
+               
+            </ul>
             <div class="navbar-nav">
                 <div class="nav-item ">
                    <i class="fa fa-pencil" id="pencil"></i>
@@ -56,12 +50,26 @@
                    
                       </div>
             </div>
+
+            
+
+            <!-- Replace this with your own logo -->
+          
         </div>
     </nav>
 </template>
 <style scoped>
+.b1{
+   padding-left: 2rem ;
+}
 .navbar{
     width: 100vw;
+    height: 60px;
+}
+ul.navbar-nav{
+    display: flex;
+    flex-direction: row;
+    margin: 0px 2rem;
 }
 #pencil{
     transform: rotateZ(90deg);
@@ -76,7 +84,13 @@
     position: fixed;
     width: 100vw;
 }
-
+.navbar-brand{
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    font-size: 15px;
+    margin-right: 21px;
+}
 
 .nav-item{
     color: black;
@@ -85,6 +99,11 @@
 }
 .nav-item h6{
     white-space: nowrap;
+}
+a{
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
 }
 </style>
 <script>

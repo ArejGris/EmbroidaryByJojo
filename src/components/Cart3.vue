@@ -1,8 +1,7 @@
 <template>
     <div class="card" @mouseover="showicon" @mouseleave="hideicons">
-        <div class="card-img" >
-            <div class="discount">out of stock</div>
-            <div :id="id" class="icon " v-if="this.show===1">
+        <Transition name="fade">
+                <div :id="id" class="icon" v-if="show">
                 <ul>
                     <li>
                 <i class="fa-solid fa-scale-balanced"></i>
@@ -13,11 +12,16 @@
 
                 </ul>
             </div>
-            <img :src="img" :url="img" alt="">
+            </Transition>
+        <div class="card-img" >
+            <div class="discount">out of stock</div>
+         
+           <div class="img">
+            <img :src="img" :url="img" alt=""></div>
         </div>
         <div class="card-body">
             <div class="card-title">
-                <span class="old-price"></span><span class="new-price">{{ price }}</span>
+                <span class="old-price"></span><span class="new-price">${{ price }}</span>
                 <h3> {{ productName}}</h3>
             </div>
             <div class="card-subtitle">
@@ -55,15 +59,15 @@ productName:{
 },
    data(){
 return{
-    show:0
+    show:false
 }
    },
     methods:{
        showicon(){
-        this.show=1
+        this.show=true
        },
        hideicons(){
-        this.show=0
+        this.show=false
        }
     }
 }
@@ -74,15 +78,18 @@ return{
 }
 .card{
     padding: 0;
-    width: 200px;
     overflow: hidden;
-    height: 370px;
-    margin-bottom: 1rem;
+    height: 350px;
 }
 .card-img{
-    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+        height: 200px;
+        overflow: hidden;
     position: absolute;
     padding:0px;
+}
+.card-img .img{
 }
 .card-body{
     width: 100%;
@@ -93,11 +100,14 @@ return{
 }
 @media screen and(max-width:760px) {
     .card{
-        width: 170px;
         height: 250px;
     }
     .card-img{
-        height: 140px;
+       
+        overflow: hidden;
+       text-align: center;
+       display: flex;
+       align-items: center;
     }
 
 }
@@ -113,7 +123,7 @@ i.fa{
 }
 .card-subtitle{
     width: 60%;
-    margin: 1rem auto;
+    margin: .2rem auto;
 }
 
 .discount{
@@ -128,20 +138,29 @@ padding: 5px 10px;
     top:7%;
     left: 3%;
 }
+.img{
+    height: 240px;
+    width:100%;
+    text-align: center;
+    margin-left: auto;
+       margin-right: auto;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+}
 img{
-    width: 100%;
     height: 100%;
-    transition: all .5s ease-in-out;
+    width: 100%;
+ transition: all .5s ease-in-out;
 }
 img:hover{
-    z-index: -1;
-    transform: translateY(-20px);
     height: 120%;
     width: 110%;
 }
 .icon{
-    top:30%;
-    left:60%;
+    top:17%;
+    left:70%;
     position: absolute;
     text-align: right;
     margin-left: auto;
@@ -151,13 +170,19 @@ img:hover{
 .icon.hide{
     display: none;
 }
-
+.card-body{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+}
 .icon ul{
     list-style: none;
 }
 .icon ul li{
-    width:40px;
-    height: 40px;
+    width:30px;
+    height: 30px;
     text-align: center;
     padding: 5px;
     background: white;
@@ -188,7 +213,6 @@ a{
 }
 @media screen and (max-width:520px){
     .card{
-        width:200px;
         height: 300px;
     }
     .card-img{
@@ -201,23 +225,32 @@ a{
 }
 @media screen and (max-width:425px){
     .card{
-        width:180px;
         height: 290px;
     }
     
 }
 @media screen and (max-width:370px){
     .card{
-        width:160px;
         height: 290px;
     }
     
 }
 @media screen and (max-width:325px){
     .card{
-        width:140px;
         height: 290px;
     }
     
+}
+.fade-enter-from{
+    
+    transform: translateX(100%);
+    opacity: 0;
+}
+.fade-enter-active{
+    transition: all .5s ease-in-out;
+}
+.fade-enter-to{
+    transform: translateX(0);
+    opacity: 1;
 }
 </style>

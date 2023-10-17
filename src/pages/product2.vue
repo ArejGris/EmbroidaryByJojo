@@ -1,31 +1,22 @@
 <template>
-  <div class="container">
-    <div class="row d-flex justify-content-center">
-      <div class="col-12">
-        <div class="head">
+  <section>
+    <div class="head">
   <h4 class="t1">{{ page }}</h4><router-link class="t2" to="/products">more products<span class="icon mdi mdi-name mdi-arrow-right"></span></router-link>
 </div>
   <v-divider></v-divider>
-<ul  class="slick-slider slick-slider1" ref="slider1" id="slider">
+<ul  class="slick-slider1" >
+  <li class="long"></li>
+
   <li v-for="prod in products" :key="prod.id">
     <router-link :to="`/product/${prod.id}`">  <Cart3 :id="prod.id" :img="prod.image_190x230" :price="prod.price" :product-name="prod.product_name"/></router-link>
    </li>
 </ul>
-
-      </div>
- 
-
-    </div>
-
-  </div>
+  </section>
 
 </template>
 <style >
 h6{
   white-space: nowrap;
-}
-.slick-prev,.slick-next,.slick-arrow{
-  z-index: -9999;
 }
 .slick-track{
 }
@@ -37,9 +28,6 @@ h6{
   margin-left: 10px;
   margin-right: 10px;
   width: 200px;
-}
-.slick-slide{
-  width: auto;
 }
 @media screen and (max-width:370px){
   .slick-slider1 li{
@@ -62,45 +50,20 @@ padding: 1px;
 
 
 
+@media screen and (max-width:530px) {
+ 
+
+}
 
 </style>
 <script>
-import 'slick-carousel/slick/slick'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
-import $ from "jquery"
 import Cart3 from '../components/Cart3.vue'
-import { useMyStore2 } from '../store2'
+import { useMyStore } from '../store'
 export default{
 props:['products','page'],
     mounted() {
-      document.getElementById('slider').style.width="auto"
-      $(this.$refs.slider1).slick({
-            
-            slidesToShow: 6,
-            slidesToScroll: 2,
-            arrow:false,
-            responsive:[
-               { breakpoint: 1024,
-                settings: { 
-                    slidesToShow: 4,
-                    slidesToScroll: 2,
-
-                }},
-                { breakpoint: 700,
-                settings: { 
-                    slidesToShow: 3,
-                    slidesToScroll: 2,
-
-                }},
-                { breakpoint: 480,
-                settings: { 
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-
-                }}
-            ]
-        })
+      
+  
     },
     components: {Cart3},
     data(){
@@ -110,7 +73,11 @@ props:['products','page'],
 
     },
     computed:{
-     
+       products1(){
+        const store=useMyStore()
+        return store.products
+
+      }
     }
 
 }
@@ -125,15 +92,25 @@ section{
 
 
 }
+.long{
+  width: 240px;
+  height: 500px;
+  overflow: hidden;
+  text-align: center;
+  background: url(../assets/default-image-405x745.png)no-repeat center center;
+  background-size: contain;
+}
+.long img{
+  margin:0px  auto;
+}
 a{
   text-decoration: none;
 }
 .head{
   position: relative;
-  width: 99%;
+  width: 99vw;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 1rem;
   margin: 0;
   left: 0;

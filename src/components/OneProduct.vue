@@ -63,7 +63,7 @@
     <h3>Related Products</h3>
     <v-divider></v-divider>
     <ul class="lista">
-        <router-link v-for="product in relatedProduct" :key="product.id" :to="`/product/${product.id}`" >
+        <router-link v-for="product in relatedProduct2" :key="product.id" :to="`/product/${product.id}`" >
         <Cart2 :img="product.image_190x230" :price="product.price" :product-name="product.product_name"/>
         </router-link>
     </ul>
@@ -71,7 +71,7 @@
 </section>
 </template>
 <script>
-import { useMyStore } from '../store';
+import { useMyStore2 } from '../store2';
 import Cart from './Cart.vue';
 import Cart2 from './Cart2.vue'
 export default{
@@ -87,25 +87,30 @@ Cart,Cart2
     computed:{
         products(){
             
-            const store=useMyStore()
+            const store=useMyStore2()
             const products=store.latest_products
             return products
 
         },
         product(){
-            const store=useMyStore()
-            const products=store.thallproducts
+            const store=useMyStore2()
+            const products=store.allproducts
             const p=products.find(prod=>
             prod.id==this.id)
             return p
         },
         relatedProduct(){
-            const store=useMyStore()
-            const products=store.thallproducts
+            const store=useMyStore2()
+            const products=store.allproducts
             const catigory_id=this.product.category_id
           
             const relatedProduct=products.filter(prod=> prod.category_id===catigory_id)
             return relatedProduct
+        }
+        ,
+        relatedProduct2(){
+            const store=useMyStore2()
+            return store.related_products
         }
     }
 }
