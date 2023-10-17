@@ -41,7 +41,8 @@ props:['img','title','price']
 }
 .card-body{
     height: 100%;
-    display: flex;
+    width: 100%;
+    display: flex;padding: 0;
 }
 .img{
     position: relative;

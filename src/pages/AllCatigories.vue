@@ -8,7 +8,7 @@
                 <div class="card d-flex">
                     <h3>{{cat.title}}</h3>
                     <router-link :to="`/catigories/${cat.id}`">
-                    <img src="../assets/default-image-970x400.png" alt="" class="img">
+                    <img src="../assets/default-image-190x230.png" alt="" class="img">
                     </router-link>
                 </div>
             </div>
@@ -46,7 +46,6 @@ section{
     background-color: rgba(197, 199, 201, 0.904);
 }
 .img{
-    max-width:300px
 }
 .card{
     display: flex;
@@ -55,8 +54,7 @@ section{
 }
 .card h3{
     text-align: left;
-    font-size: 18px;
-    color: gray;
+    font-size: 16px;
     font-weight: 600;
 }
 .card a{
@@ -65,7 +63,6 @@ section{
     justify-content: right;
 }
 .card a img{
-width :70%
 }
 
 </style>

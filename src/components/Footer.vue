@@ -48,9 +48,7 @@
                 <h5>About</h5><br/>
                <span>EmbroideryByJojo</span>  being the trusted online shop in over the world aims to provide a trouble-free shopping experience for the people of the world but is also providing ample opportunity for international online shopping from yoori. Yoori being the trusted online shop in over the world aims to provide a trouble-free shopping experience for the people of the world but is also providing ample opportunity for international online shopping from yoori.
             </div>
-        </div>
-    </div>
-    
+               
     <ul class="list8">
         <li><router-link to="/">Home</router-link></li>
         <li><router-link to="/catigories">All Catigories</router-link></li>
@@ -61,11 +59,17 @@
     </ul>
 <div class="divider"></div>
 <p>©2023 All Rights Reserved.</p>
+        </div>
+    </div>
+ 
     </section>
    
 
 </template>
 <style scoped>
+.container-fluid{
+    margin-left: 2rem;
+}
 h5{
     white-space: nowrap;
 }
@@ -74,14 +78,14 @@ i{
 }
 .footer{
     width: 100vw;
-    background-color: rgba(0, 0, 0, 0.726);
+    background-color: rgba(0, 0, 0, 0.774);
     padding: 1rem 0px;
     margin-top: 0;
 }
 .img{
     position: relative;
-    width: 80px;
-    height: 50px;
+    width: 70px;
+    height: 40px;
     margin-left: auto;
     margin-bottom: 1rem;
     z-index: 1;
@@ -96,7 +100,7 @@ ul{
     text-align: left;
 }
 ul li{
-    margin-bottom: 1rem ;
+    font-size: 16px;
     color: white;
     transition: all .5s ease-in-out;
     cursor: pointer;
@@ -112,7 +116,7 @@ ul li i{
     text-align: left;
     overflow: hidden;
     margin-left: 4rem;
-    font-size: 15px;
+    font-size: 13px;
     margin-top: 10px;
 }
 .about span{
@@ -124,7 +128,7 @@ h5{
     color:white
 }
 .divider{
-    width: 100%;
+    width: 90%;
     height: 1px;
     background-color: rgba(197, 199, 201, 0.904);
 }

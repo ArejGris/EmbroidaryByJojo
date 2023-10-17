@@ -13,9 +13,12 @@
 <v-spacer></v-spacer>
         
          </div>
-    </div>
-       <div class="row d-flex flex-column justify-content-center align-items-center">
-        <div class="col-12 cc">
+   
+       
+            <div class="col-4"></div>
+
+        <div class="col-8">
+            <div class="cc">
                 <div class="icons">
                     <div class="iconleft">
                         <h3>Sort By</h3>
@@ -44,11 +47,8 @@
                 
                
             </div>
-               
             </div>
-        <div class="col-12">
-            
-            <ul v-if="showlist" class="row list">
+            <ul v-if="showlist" class=" list">
                    <li v-for="p in products" :key="p.id">
                     
                         <Cart4 :img="p.image_190x230" :title="p.product_name" :price="p.price"/>
@@ -66,7 +66,7 @@
 </div>
 </template>
 <script >
-import { useMyStore } from '../store';
+import { useMyStore2 } from '../store2';
 import Cart from '../components/Cart.vue';
 import Cart4 from '../components/Cart4.vue';
 import SideList from '../components/SideList.vue';
@@ -85,7 +85,7 @@ return{
 
     computed:{
         catigory(){
-            const store=useMyStore()
+            const store=useMyStore2()
 const catigories=store.categories
 const catigory=catigories.find(c=>c.id===Number(this.id))
             return catigory
@@ -94,7 +94,7 @@ const catigory=catigories.find(c=>c.id===Number(this.id))
 methods:{
         computeproducts(sort){
             
-            const store=useMyStore()
+            const store=useMyStore2()
             
             const products=store.allproducts.filter(p=> Number(p.category_id)===Number(this.id))
             var p
@@ -176,6 +176,7 @@ margin-left: 10px;
 .list{
 list-style:none;
 margin-left: auto;
+margin-right: 1rem;
 width: 100%;
 }
 .card1{
