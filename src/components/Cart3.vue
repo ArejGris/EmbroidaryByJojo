@@ -160,7 +160,7 @@ img:hover{
 }
 .icon{
     top:17%;
-    left:70%;
+    right: 7%;
     position: absolute;
     text-align: right;
     margin-left: auto;

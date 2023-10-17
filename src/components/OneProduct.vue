@@ -41,7 +41,7 @@
     </ul>
     
     </div>
-    <div class="recent-product">
+    <div class="recent-product" >
         <h3>Recent Product</h3>
         <v-divider></v-divider>
         <ul>
@@ -63,7 +63,7 @@
     <h3>Related Products</h3>
     <v-divider></v-divider>
     <ul class="lista">
-        <router-link v-for="product in relatedProduct2" :key="product.id" :to="`/product/${product.id}`" >
+        <router-link v-for="product in relatedProduct2" :key="product.id" :to="{path:`/product/${product.id}`,query:{name:'product'}}" >
         <Cart2 :img="product.image_190x230" :price="product.price" :product-name="product.product_name"/>
         </router-link>
     </ul>
@@ -72,7 +72,7 @@
 </template>
 <script>
 import { useMyStore2 } from '../store2';
-
+import { useRoute } from 'vue-router';
 import Cart2 from './Cart2.vue'
 export default{
     components:{
@@ -94,9 +94,15 @@ Cart2
         },
         product(){
             const store=useMyStore2()
-            const products=store.allproducts
-            const p=products.find(prod=>
+            let products=store.allproducts
+            let p=products.find(prod=>
             prod.id==this.id)
+            if(!p){
+                products=store.related_products
+             p=products.find(prod=>
+            prod.id==this.id)
+
+            }
             return p
         },
         relatedProduct(){
@@ -123,12 +129,7 @@ section{
     display: flex;
     padding: 2rem;
 }
-@media screen and (max-width:820px) {
-    section{
-        display: block;
-        padding: 0;
-    }
-}
+
 .details{
 }
 .title{
@@ -261,11 +262,14 @@ background-color: rgb(30, 30, 240);
 .lista{
     list-style: none;
     width: 100%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(4,1fr);
+    gap:14px;
+}
+.lista a{
     display: flex;
     justify-content: center;
-
-    flex-wrap: wrap;
-    gap:14px
 }
 
 .lista .card h3{
@@ -285,6 +289,20 @@ background-color: rgb(30, 30, 240);
 }
 a{
     text-decoration: none;
+}
+@media screen and (max-width:765px) {
+  .recent-product{
+    display: none;
+  }
+  section{
+        display: block;
+        padding: 0;
+    }
+    .lista{
+        
+    grid-template-columns: repeat(2,1fr);
+    }
+    
 }
 @media screen and (max-width:540px) {
   .options .btn{

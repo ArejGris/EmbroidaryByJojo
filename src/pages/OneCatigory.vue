@@ -153,6 +153,9 @@ font-size: 13px;
 .iconright div{
 margin-left: 10px;
 }
+.iconright span{
+    font-size: 26px;
+}
 .cc{
     margin-top: 2rem;
     height: 59px;

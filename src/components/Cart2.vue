@@ -16,12 +16,16 @@
             </div>
 
             </Transition>
-           
+           <div class="img">
+            
             <img :src="img" :url="img" alt="">
+
+           </div>
+
         </div>
         <div class="card-body">
             <div class="card-title">
-                <span class="old-price"></span><span class="new-price">{{ price }}</span>
+                <span class="old-price"></span><span class="new-price">${{ price }}</span>
                 <h3> {{ productName}}</h3>
             </div>
             <div class="card-subtitle">
@@ -78,28 +82,36 @@ this.show=value
 </script>
 <style scoped>
 .card{
-    padding: 0;
-    width: 190px;
-    height: 270px;
-margin-bottom: .7rem;}
+    padding:15px;
+    width: 230px;
+margin-bottom: .7rem;
+border: 1px solid rgba(128, 128, 128, 0.103);
+}
     .card-body{
-        position: absolute;
-        top:150px;
-        left:0;
-        width: 100%;
-        height: 50%;
 
     }
 
 .card-img{
+    margin-top: 36px;
     overflow: hidden;
-    height: 190px;
-    position: absolute;
-    padding:0px;
-    top:0
+
 }
-.card-img img{
-    margin-top: 10%;
+.card-img .img{
+    text-align: center;
+    position: relative;
+    height: 140px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img img{
+    width: 100%;
+    position: absolute;
+}
+span{
+   
 }
 .old-price{
     text-decoration: line-through;
@@ -120,30 +132,25 @@ font-size:13px;
 }
 .discount{
     z-index: 1;
-font-size: 13px;
+font-size: 10px;
 background-color: red;
 color:white;
 border-radius: 5px;
-padding: 5px 10px;
+padding: 5px;
     width: 100px;
     position: absolute;
     top:7%;
     left: 3%;
 }
 img{
-    width: 100%;
-    height: 100%;
     transition: all .5s ease-in-out;
 }
 img:hover{
-    z-index: -1;
-    transform: translateY(-20px);
-    height: 120%;
-    width: 110%;
+    width:120%;
 }
 .icons{
-    top:17%;
-    left:60%;
+    top:23%;
+    right: 10%;
     position: absolute;
     text-align: right;
     margin-left: auto;
