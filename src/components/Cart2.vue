@@ -3,7 +3,7 @@
         <div class="card-img" >
             <div class="discount">out of stock</div>
             <Transition name="fade">
-                <div id="icon" class="icon " v-if="this.show===1">
+                <div id="icon" class="icons " v-if="this.show===1">
                 <ul>
                     <li>
                 <i class="fa-solid fa-scale-balanced"></i>
@@ -100,7 +100,6 @@ margin-bottom: .7rem;}
 }
 .card-img img{
     margin-top: 10%;
-    height: 150px;
 }
 .old-price{
     text-decoration: line-through;
@@ -142,8 +141,8 @@ img:hover{
     height: 120%;
     width: 110%;
 }
-.icon{
-    top:30%;
+.icons{
+    top:17%;
     left:60%;
     position: absolute;
     text-align: right;
@@ -151,14 +150,14 @@ img:hover{
     z-index: 999;
 
 }
-.icon.hide{
+.icons.hide{
     display: none;
 }
 
-.icon ul{
+.icons ul{
     list-style: none;
 }
-.icon ul li{
+.icons ul li{
     width:30px;
     height: 30px;
     text-align: center;
@@ -167,7 +166,7 @@ img:hover{
     border-radius: 100%;
     margin-bottom: 3px;
 }
-.icon ul li{
+.icons ul li{
 }
 h3{
     font-size: 15px;

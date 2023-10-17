@@ -36,17 +36,21 @@ props:['img','title','price']
 </script>
 <style scoped>
 .card{
-    height: 139px;
+    height:200px;
     padding: 0;
 }
 .card-body{
     height: 100%;
     width: 100%;
-    display: flex;padding: 0;
+    display: flex;
+    justify-content: left;
+    align-items:center;
+    padding: 0;
 }
+
 .img{
+    height: 100%;
     position: relative;
-    width: 130px;
 }
 
 .img span{
@@ -55,14 +59,12 @@ props:['img','title','price']
     border-radius: 3px;
     background-color: red;
     color:white;
-    top:0;
+    top:10px;
     left:10px;
     font-size: 13px;
 
 }
 .img img{
-    height:150px;
-    width: 100%;
 }
 .icons{
     list-style: none;
@@ -106,5 +108,22 @@ props:['img','title','price']
         font-size: 6px;
     }
 
+}
+@media screen and (max-width:470px){
+   .card-body{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    
+   } 
+   .card{
+    padding: 10px;
+    height: auto;
+   }
+   .img span{
+    font-size: 12px;
+    top:10%;
+    left: 1%;
+   }
 }
 </style>

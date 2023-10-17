@@ -3,11 +3,11 @@
 <v-divider></v-divider>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-4 col-lg-4">
+        <div class="col-md-4 col-lg-3">
            <SideList/>
 
         </div>
-        <div class="col-md-8 col-lg-8">
+        <div class="col-md-8 col-lg-9">
             <img src="../assets/img.jpg" alt="" class="img">
             
 <v-spacer></v-spacer>
@@ -15,9 +15,9 @@
          </div>
    
        
-            <div class="col-4"></div>
+            <div class="col-md-4 col-lg-3"></div>
 
-        <div class="col-8">
+        <div class="col-md-8 col-lg-9">
             <div class="cc">
                 <div class="icons">
                     <div class="iconleft">
@@ -57,7 +57,7 @@
                 </ul>
                     <div class="cardgrid" v-else>
                     <div  v-for="p in products" :key="p.id">
-                    <Cart :img="p.image_190x230" :price="p.price" :product-name="p.product_name"/>
+                    <Cart2 :img="p.image_190x230" :price="p.price" :product-name="p.product_name"/>
                     </div>
                     </div>
         </div>
@@ -67,13 +67,13 @@
 </template>
 <script >
 import { useMyStore2 } from '../store2';
-import Cart from '../components/Cart.vue';
+import Cart2 from '../components/Cart2.vue';
 import Cart4 from '../components/Cart4.vue';
 import SideList from '../components/SideList.vue';
 export default{
     props:['id'],
     components:{
-    Cart,SideList,Cart4
+    Cart2,SideList,Cart4
 },
 data(){
 return{

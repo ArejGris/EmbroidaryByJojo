@@ -72,11 +72,11 @@
 </template>
 <script>
 import { useMyStore2 } from '../store2';
-import Cart from './Cart.vue';
+
 import Cart2 from './Cart2.vue'
 export default{
     components:{
-Cart,Cart2
+Cart2
     },
     props:[
         'id'

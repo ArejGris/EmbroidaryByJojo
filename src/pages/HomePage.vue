@@ -64,6 +64,14 @@ return store.latest_products
 }
 </script>
 <style scoped>
+.t2{
+    white-space: nowrap;
+}
+@media screen and (max-width:700px){
+ .t2,.browse h6{
+    font-size: 13px;
+ }   
+}
 .cats{
     text-align: center;
     background-color: rgba(128, 128, 128, 0.123);
@@ -78,6 +86,15 @@ return store.latest_products
     display: flex;
     justify-content: space-between;
     padding: 2rem;
+}
+
+@media screen and (max-width:700px){
+ .t2,.browse h6{
+    font-size: 13px;
+ }   
+ .browse{
+    padding:2rem 0px;
+ }
 }
 a{
     text-decoration: none;

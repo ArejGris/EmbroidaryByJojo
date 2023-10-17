@@ -207,7 +207,6 @@ a{
 }
 @media screen and (max-width:790px) {
     .card{
-        width:210px;
         height:350px
     }
 }
