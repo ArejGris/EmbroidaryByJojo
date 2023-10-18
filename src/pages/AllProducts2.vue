@@ -97,6 +97,9 @@ ul{
 #form .form-group{
     margin-left: 10px;
 }
+.form-group .mdi{
+    font-size: 19px;
+}
 .products .list-icon{
     margin-top: 1rem;
     width: 100%;
@@ -113,6 +116,7 @@ ul{
     display:flex;
     flex-direction: row;
     align-items: center;
+    gap:10px
 }
 .list-icon ul li i{
     margin-left: 10px;

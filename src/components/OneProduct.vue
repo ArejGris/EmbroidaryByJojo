@@ -216,7 +216,15 @@ Cart2
 }
 </script>
 <style scoped>
-
+.card{
+    border:1px solid rgba(128, 128, 128, 0.116);
+    margin-bottom: 1rem;
+}
+.card1{
+    
+    border:1px solid rgba(128, 128, 128, 0.295);
+    border-radius: 3px;
+}
 .count{
     width: 100%;
     display: flex;
@@ -399,8 +407,8 @@ background-color: rgb(30, 30, 240);
 .recent-product ul li{
    width: 300px;
     padding:5px  10px;
-    border: 1px solid rgb(187, 186, 186);
-    border-radius: 10px ;
+    border: 1px solid rgba(187, 186, 186, 0.384);
+    border-radius: 3px ;
     margin-bottom: 1rem;
     
     display: flex;
@@ -440,6 +448,9 @@ background-color: rgb(30, 30, 240);
 }
 a{
     text-decoration: none;
+}
+.options .btn{
+ 
 }
 @media screen and (max-width:765px) {
   .recent-product{

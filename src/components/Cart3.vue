@@ -80,6 +80,7 @@ return{
     padding: 0;
     overflow: hidden;
     height: 350px;
+    border: 1px solid rgba(128, 128, 128, 0.1189);
 }
 .card-img{
     margin-left: auto;
