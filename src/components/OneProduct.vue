@@ -255,6 +255,9 @@ color: rgba(128, 128, 128, 0.555);
    padding: 0;
     white-space: nowrap;
 }
+.star-counter{
+    padding-left: 0;
+}
 .star-counter li{
     display: flex;
     width: 100%;
@@ -452,6 +455,31 @@ a{
     font-size: 7px;
     margin-left: 3px;
     }
+    .progress{
+        width: 150px;
+    }
     
+}
+@media screen and (max-width:500px) {
+  .count{
+    padding: 0;
+    margin:1rem 0 0 0;
+  }
+    .progress{
+        width: 130px;
+    }
+    .tab-pane h1{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:400px){
+    
+    .lista{
+        
+        grid-template-columns: repeat(1,1fr);
+        }
+        .progress{
+            width: 100px;
+        }
 }
 </style>

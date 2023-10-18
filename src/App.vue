@@ -15,7 +15,7 @@
     <SideBar v-if="show" @clickme="show=false" />
 
     <router-view ></router-view>
-    <div class="arrow bg-warning" @click="gototop"><i class="fa fa-angle-up"></i></div>
+    <div class="arrow " @click="gototop"><i class="fa fa-angle-up"></i></div>
     <Footer/>
    
     <NavBar @sendaction="action" class="hide1"/>
@@ -71,20 +71,24 @@ else{
     width: 50px;
     height: 50px;
     border-radius: 100%;
-    color:white ;
+    color:black ;
     position: fixed;
     z-index: 9999999;
     bottom:10%;
     right:10%;
-    font-size: 24px;
+    font-size: 19px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color:  rgb(255, 196, 0);
+    transition: all .3s ease-in-out;
 }
 
 .arrow:hover{
-font-size: 28px;
+    background-color: white;
+    border: 1px solid rgb(255, 196, 0);
+
 }
 .nav2{
     top:0;
@@ -128,7 +132,9 @@ nav.hide1{
 }
 @media screen and (max-width: 600px) {
     .arrow{
-        bottom:15%
+        bottom:15%;
+        width: 40px;
+        height: 40px;
     }
     nav.hide{
         display: none;
