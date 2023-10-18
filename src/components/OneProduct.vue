@@ -58,7 +58,94 @@
         </ul>
     </div>
 </section>
+<section>
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-9">
+        <div class="card">
+            
+        <ul role="tablist" class="nav nav-tabs description-tabs">
+            <a href="javascript:void(0)" aria-controls="details" role="tab" data-bs-toggle="tab" @click="this.page=false" class="nav-link" aria-selected="false" tabindex="-1">
+								Details
+							</a>
+                            <a href="javascript:void(0)" aria-controls="review" role="tab" @click="this.page=true" data-bs-toggle="tab" class="nav-link" aria-selected="false" tabindex="-1">
+								Review
+							</a>
+                           
+        </ul>
+        <div class="tab-content">
+            <div role="tabpanel" id="details" class="tab-pane fade" v-if="!page">
+             <div>
 
+                </div>
+            </div> 
+            <div role="tabpanel" id="review" class="tab-pane fade show active" v-else>
+                <div class="count">
+                    <div class="percentage">
+                        <span >0</span>
+                        <p>Out of 0</p>
+                    </div>
+                    <ul class="stars">
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                    </ul>
+                      <span>(0 Reviews)</span>
+                      <ul class="star-counter">
+                        <li><span>1 star</span>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span>0%</span>
+                        </li>
+                        <li><span>2 star</span>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span>0%</span>
+                        </li>
+                        <li><span>3 star</span>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span>0%</span>
+                        </li>
+                        <li><span>4 star</span>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span>0%</span>
+                        </li>
+                        <li><span>5 star</span>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span>0%</span>
+                        </li>
+                      </ul>
+
+
+                </div>
+                
+                <h1>Customer Reviews</h1>
+                      <h1>0 Comments</h1>
+                                   
+            </div>
+        </div>
+
+
+        </div>
+
+
+
+    </div>
+
+        </div>
+    </div>
+  
+</section>
 <section class="sec2">
     <h3>Related Products</h3>
     <v-divider></v-divider>
@@ -81,6 +168,11 @@ Cart2
     props:[
         'id'
     ],
+    data(){
+        return{
+            page:false
+        }
+    },
     mounted(){
 
     },
@@ -122,6 +214,57 @@ Cart2
 }
 </script>
 <style scoped>
+.count{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    margin-top: 1rem;
+    padding-top: 10px;
+    background-color: rgba(128, 128, 128, 0.205);
+}
+.tab-pane h1{
+    margin-left: 10px;
+    width: 90%;
+    text-align: left;
+    font-size: 23px;
+    font-weight: 900;
+}
+ul.stars{
+    display: flex;
+}
+ul.stars li i{
+color: rgba(128, 128, 128, 0.555);
+}
+.percentage{
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    padding: 3rem;
+    border-radius: 100%;
+    border:5px solid  rgb(255, 196, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   justify-content: center;
+}
+.percentage p{
+    text-align: center;
+   padding: 0;
+    white-space: nowrap;
+}
+.star-counter li{
+    display: flex;
+    width: 100%;
+}
+.progress{
+    flex:1;
+    width: 200px;
+    margin: 0px 10px;
+    background-color: white;
+}
 .title{
     margin-left: 19px;
 }
