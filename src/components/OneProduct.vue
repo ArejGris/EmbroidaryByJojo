@@ -14,13 +14,13 @@
         <div class="title">
 
             <span>{{ product.product_name }}</span>
-        <span class="price-icon"><h3>{{product.price}}</h3></span>
+        <span class="price-icon"><h3>${{product.price}}</h3></span>
         </div>
         <div class="card total-price">
         <div class="price">
             <div class="counter">- 37 +</div>
             <h4>Total Price</h4>
-        <span class="price-icon"><h4>{{product.price}}</h4></span>
+        <span class="price-icon"><h4>${{product.price}}</h4></span>
 
         </div>
     </div>
@@ -29,7 +29,9 @@
         <div class="options">
         <button class="btn btn-dark"><i class="fa fa-suitcase"></i> ADD TO CARD</button>
         <button class="btn btn-light"><i class="fa-solid fa-cart-shopping"></i> BUY NOW</button>
-        <button>compare</button>
+        <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 40.095 37.193">
+                <path id="iconmonstr-random-thin" d="M34.328,5.7,29.853,2.2,30.906,1,38,6.563l-7.087,5.573-1.053-1.2,4.66-3.646H27.927c-5.619.068-8.241,5.417-10.951,11.173,2.71,5.754,5.332,11.1,10.951,11.171H34.42l-4.567-3.575,1.053-1.2L38,30.427,30.913,36l-1.053-1.2,4.569-3.575H27.917c-6.172-.076-9.163-5.36-11.819-10.91C13.425,25.9,10.408,31.2,4.155,31.227H0V29.636H4.152c5.7-.022,8.345-5.388,11.07-11.171C12.5,12.68,9.855,7.314,4.152,7.292H0V5.7H4.155c6.253.025,9.27,5.326,11.943,10.91C18.754,11.061,21.745,5.778,27.917,5.7h6.411Z" ></path></svg>compare</button>
 
         </div>
     </div>
@@ -214,6 +216,7 @@ Cart2
 }
 </script>
 <style scoped>
+
 .count{
     width: 100%;
     display: flex;
@@ -280,6 +283,8 @@ section{
 }
 .title{
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 .title h3{
     font-size: 24px;

@@ -86,7 +86,7 @@ else{
 }
 
 .arrow:hover{
-    background-color: white;
+    background-color: transparent;
     border: 1px solid rgb(255, 196, 0);
 
 }
