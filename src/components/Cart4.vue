@@ -2,7 +2,9 @@
 <div class="card ">
 
 <div class="card-body ">
+    
     <div class="img">
+        
 <span>out of stock</span>
         <img :src="img" alt="" >
     </div>
@@ -50,6 +52,7 @@ props:['img','title','price']
 
 .img{
     height: 100%;
+    max-width: 100%;
     position: relative;
 }
 
@@ -60,11 +63,12 @@ props:['img','title','price']
     background-color: red;
     color:white;
     top:10px;
-    left:10px;
+    left:-20px;
     font-size: 13px;
 
 }
 .img img{
+    width: 100%;
 }
 .icons{
     list-style: none;
@@ -98,11 +102,8 @@ props:['img','title','price']
 }
 @media  screen and (max-width:340px) {
     .img{
-        width: 100px;
     }
-    .title{
-        font-size: 9px;
-    }
+   
    
     .content li i.fa{
         font-size: 6px;
@@ -120,10 +121,13 @@ props:['img','title','price']
     padding: 10px;
     height: auto;
    }
+   .img{
+    width: 50%;
+    margin-left: 2rem;
+   }
    .img span{
     font-size: 12px;
     top:10%;
-    left: 1%;
    }
 }
 </style>

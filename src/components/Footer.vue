@@ -9,21 +9,21 @@
         
     <div class="divider"></div>
             </div>
-            <div class="col-11 col-md-2 col-lg-2 col-xl-2">
+            <div class=" col-md-2 col-lg-2 col-xl-2">
                 <ul>
                     <li><h5>Seller Options</h5></li>
                     <li>Login as Seller</li>
                     <li>Sign up as Seller</li>
                 </ul>
             </div>
-            <div class="col-11 col-md-2 col-lg-2 col-xl-2">
+            <div class=" col-md-2 col-lg-2 col-xl-2">
                 <ul>
                     <li><h5>My Account</h5></li>
                     <li>login</li>
                     <li>create account</li>
                 </ul>
             </div>
-            <div class="col-11 col-md-2 col-lg-2 col-xl-2">
+            <div class=" col-md-2 col-lg-2 col-xl-2">
                 <ul>
                     <li><h5>Useful Links</h5></li>
                     <li>Latest News</li>
@@ -35,7 +35,7 @@
                     <li>Refund Policy</li>
                 </ul>
             </div>
-            <div class="col-11 col-md-2 col-lg-2 col-xl-2">
+            <div class=" col-md-2 col-lg-2 col-xl-2">
                 <ul class="list connect">
                     <li><h5>Connect us</h5></li>
                     <li><i class="fa fa-home"></i>Address</li>
@@ -44,7 +44,7 @@
                     <li><i class="fa fa-phone"></i>Phone<a href="tel:01234567890"> 01234567890</a></li>
                 </ul>
             </div>
-            <div class="col-12 col-md-2 col-lg-2 col-xl-2 about" >
+            <div class=" col-md-2 col-lg-2 col-xl-2 about" >
                 <h5>About</h5><br/>
                <span>EmbroideryByJojo</span>  being the trusted online shop in over the world aims to provide a trouble-free shopping experience for the people of the world but is also providing ample opportunity for international online shopping from yoori. Yoori being the trusted online shop in over the world aims to provide a trouble-free shopping experience for the people of the world but is also providing ample opportunity for international online shopping from yoori.
             </div>
@@ -165,5 +165,13 @@ p{
     color:white
 }
 .col-12{
+}
+@media screen and (max-width:767px){
+    .list li{
+        margin-left: 0;
+    }
+    .about{
+        margin-left: 2rem;
+    }
 }
 </style>
