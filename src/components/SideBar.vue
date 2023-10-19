@@ -25,6 +25,7 @@ export default{
                     <span data-v-3b91b666="" class="mdi mdi-view-dashboard-outline mdi-18px"></span> 
                     <router-link :to="`/catigories/${cat.id}`">{{ cat.title }}</router-link>
                 </li>
+                <li class="color"><router-link to="/catigories">view all categories<i class="fa fa-angle-right"></i></router-link></li>
                 
             </ul>
            </div>
@@ -37,24 +38,32 @@ export default{
         z-index: 999;
         background-color: white;
         position: fixed;
-        top:38%;
+        top:28%;
         left: .8rem;
         width: 500px;
     }
     
 .sidebar{
-    width: 400px;
+    width: 300px;
 }
 .sidelist{
     list-style: none;
     text-align: left;
 }
+.color a{
+    color:rgb(255, 196, 0)
+}
 .sidelist li{
-    border-bottom: none;
     border: .1px solid rgba(128, 128, 128, 0.295);
-    padding: .5rem 2rem;
+
+    border-bottom: none;
+    padding: 1rem 2rem;
     width: 100%;
     white-space: nowrap;
+}
+
+.sidelist li:not(:last-child){
+    border-bottom: none;
 }
 .sidelist li:hover {
     border-left: 1px solid  rgb(255, 196, 0);

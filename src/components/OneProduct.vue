@@ -152,7 +152,7 @@
     <h3>Related Products</h3>
     <v-divider></v-divider>
     <ul class="lista">
-        <router-link v-for="product in relatedProduct2" :key="product.id" :to="{path:`/product/${product.id}`,query:{name:'product'}}" >
+        <router-link v-for="product in relatedProduct2" :key="product.id" :to="`/product/${product.id}`" >
         <Cart2 :img="product.image_190x230" :price="product.price" :product-name="product.product_name"/>
         </router-link>
     </ul>
