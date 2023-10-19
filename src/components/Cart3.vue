@@ -177,6 +177,7 @@ img:hover{
     bottom: 0;
     width: 100%;
     height: 50%;
+    top: 10px;
 }
 .icon ul{
     list-style: none;

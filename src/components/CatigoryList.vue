@@ -104,7 +104,7 @@ img{
 }
 a{
     width: 100%;
-    height: auto;
+    height: 100%;
     padding:20px 10px;
     display: block;
     text-align: center;

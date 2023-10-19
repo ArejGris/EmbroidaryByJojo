@@ -92,7 +92,6 @@ border: 1px solid rgba(128, 128, 128, 0.103);
     }
 
 .card-img{
-    margin-top: 36px;
     overflow: hidden;
 
 }
@@ -138,7 +137,6 @@ color:white;
 border-radius: 5px;
 padding: 5px;
     width: 100px;
-    position: absolute;
     top:7%;
     left: 3%;
 }
@@ -149,7 +147,7 @@ img:hover{
     width:120%;
 }
 .icons{
-    top:23%;
+    top:18%;
     right: 10%;
     position: absolute;
     text-align: right;
@@ -205,6 +203,13 @@ a{
 @media screen and (max-width:425px){
     .card{
         width:180px;
+        height: 290px;
+    }
+    
+}
+@media screen and (max-width:325px){
+    .card{
+        width:150px;
         height: 290px;
     }
     

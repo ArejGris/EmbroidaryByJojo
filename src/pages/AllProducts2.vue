@@ -58,7 +58,7 @@
                    <div class="cardgrid" v-else>
                    <div  v-for="p in products" :key="p.id">
                     <router-link :to="`/product/${p.id}`">
-                   <Cart3 :img="p.image_190x230" :price="p.price" :product-name="p.product_name"/>
+                   <Cart2 :img="p.image_190x230" :price="p.price" :product-name="p.product_name"/>
                     </router-link>
                    </div>
                    </div>
@@ -85,7 +85,6 @@ ul{
 .list-icon{
 
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -224,13 +223,13 @@ font-size: 17px;
 </style>
 <script >
 import { useMyStore2 } from '../store2';
-import Cart3 from '../components/Cart3.vue';
+import Cart2 from '../components/Cart2.vue';
 import Cart4 from '../components/Cart4.vue';
 import SideList from '../components/SideList.vue';
 export default{
     props:['id'],
     components:{
-   SideList,Cart3,Cart4
+   SideList,Cart2,Cart4
 },
 data(){
 return{

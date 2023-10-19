@@ -330,8 +330,8 @@ section{
 display: inline;
     color: red;
 }
-.options{
-    display: flex;
+.options *{
+   margin: 10px;
 }
 details .card{
     margin-top: 1rem;
@@ -468,8 +468,11 @@ a{
 }
 @media screen and (max-width:540px) {
   .options .btn{
-    font-size: 7px;
+    font-size: 13px;
     margin-left: 3px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     }
     .progress{
         width: 150px;
