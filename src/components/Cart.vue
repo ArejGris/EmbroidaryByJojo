@@ -1,8 +1,8 @@
 <template>
-    <div class="card" @mouseover="showicon" @mouseleave="hideicons">
+    <div class="card" @mouseover="showicon" @mouseleave="hideicon">
         <div class="card-img" >
-            <div class="discount">out of stock</div>
-            <div :id="id" class="icon " v-if="this.show">
+            <div class="discount">%20.00 off</div>
+            <div  class="icon " v-if="show">
                 <ul>
                     <li>
                 <i class="fa-solid fa-scale-balanced"></i>
@@ -17,7 +17,7 @@
         </div>
         <div class="card-body">
             <div class="card-title">
-                <span class="old-price"></span><span class="new-price">{{ price }}</span>
+                <span class="old-price">${{ price }}</span><span class="new-price">$997.00</span>
                 <h3> {{ productName}}</h3>
             </div>
             <div class="card-subtitle">
@@ -58,13 +58,10 @@ show:false
     }),
     methods:{
        showicon(){
-        const icon=document.getElementById(this.id)
-        icon.classList.remove('hide')
+        
         this.show=ture
        },
        hideicon(){
-        const icon=document.getElementById(this.id)
-        icon.classList.add('hide')
         this.show=false
        }
     }
@@ -80,15 +77,14 @@ show:false
     overflow: hidden;
     height: 370px;
     margin-bottom: 1rem;
+    border: 1px solid rgba(128, 128, 128, 0.205);
 }
 .card-img{
-    height: 250px;
-    position: absolute;
-    padding:0px;
+    height: 200px;
+    padding:0px 10px;
 }
 .card-body{
     width: 100%;
-    margin-top: 100%;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -115,7 +111,7 @@ i.fa{
 }
 .card-subtitle{
     width: 60%;
-    margin: 1rem auto;
+    margin: 0px auto;
 }
 
 .discount{
@@ -127,7 +123,7 @@ border-radius: 5px;
 padding: 5px 10px;
     width: 100px;
     position: absolute;
-    top:7%;
+    top:5%;
     left: 3%;
 }
 img{
@@ -137,9 +133,7 @@ img{
 }
 img:hover{
     z-index: -1;
-    transform: translateY(-20px);
-    height: 120%;
-    width: 110%;
+   transform: scale(1.1);
 }
 .icon{
     top:30%;
@@ -147,12 +141,10 @@ img:hover{
     position: absolute;
     text-align: right;
     margin-left: auto;
-    z-index: 999;
+    z-index: 99999;
 
 }
-.icon.hide{
-    display: none;
-}
+
 
 .icon ul{
     list-style: none;

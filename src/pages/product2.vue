@@ -5,10 +5,12 @@
 </div>
   <v-divider></v-divider>
 <ul  class="slick-slider1" >
-  <li class="long"></li>
 
-  <li v-for="prod in products" :key="prod.id">
-    <router-link :to="`/product/${prod.id}`">  <Cart3 :id="prod.id" :img="prod.image_190x230" :price="prod.price" :product-name="prod.product_name"/></router-link>
+  <li >
+    <router-link :to="`/product/${products[0].id}`">  <Cart3 :id="products[0].id" :img="products[0].image_190x230" :price="products[0].price" :product-name="products[0].product_name"/></router-link>
+   </li>
+   <li >
+    <router-link :to="`/product/${products[1].id}`">  <Cart :id="products[1].id" :img="products[1].image_190x230" :price="products[1].price" :product-name="products[1].product_name"/></router-link>
    </li>
 </ul>
   </section>
@@ -58,6 +60,7 @@ padding: 1px;
 </style>
 <script>
 import Cart3 from '../components/Cart3.vue'
+import Cart from '../components/Cart.vue'
 import { useMyStore } from '../store'
 export default{
 props:['products','page'],
@@ -65,7 +68,7 @@ props:['products','page'],
       
   
     },
-    components: {Cart3},
+    components: {Cart3,Cart},
     data(){
       return{
        

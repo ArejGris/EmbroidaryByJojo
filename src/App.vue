@@ -55,27 +55,21 @@ const gototop=()=>{
     window.scrollTo(0,0)
 }
 onMounted(()=>{
-const wide=window.innerWidth
-if(Number(wide)>800){
-    wideOrNarrow.value=true
-}
-else{
-    wideOrNarrow.value=false
-}
+
 
 })
 
 </script>
 <style scoped>
 .arrow{
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 100%;
     color:black ;
     position: fixed;
-    z-index: 9999999;
+    z-index: 9999;
     bottom:10%;
-    right:10%;
+    right:4%;
     font-size: 19px;
     cursor: pointer;
     display: flex;
@@ -130,17 +124,21 @@ display: flex;
 nav.hide1{
     display: none;
 }
-@media screen and (max-width: 600px) {
-    .arrow{
-        bottom:15%;
-        width: 40px;
-        height: 40px;
-    }
+@media screen and (max-width:1000px) {
     nav.hide{
         display: none;
     }
     nav.hide1{
         display: flex;
     }
+}
+@media screen and (max-width: 600px) {
+    .arrow{
+        bottom:15%;
+        width: 40px;
+        height: 40px;
+    }
+   
+   
 }
 </style>

@@ -4,17 +4,21 @@
     position: fixed;
     z-index: 9999;
     width: 100vw;
-    height:70px;
+    height:60px;
     bottom: 0;
     left: 0;
     
 background: rgb(255, 196, 0);
 }
+.navbar1{
+  width: 100%;
+  height: 100%;
+}
 .navbar-nav1{
 display: flex;
 flex-direction: row;
 align-items: center;
-justify-content: center;
+justify-content: space-around;
 color:white;
 list-style: none;
 }
@@ -57,7 +61,7 @@ a img{
 
         <nav class="nav navbar">
    
-   <ul class="navbar navbar-nav1">
+   <ul class="navbar1 navbar-nav1">
        <li class="nav-item">
            <a class="nav-link" @click="sendaction(1)"><img src="../assets/list.svg" alt=""></a>
        </li>

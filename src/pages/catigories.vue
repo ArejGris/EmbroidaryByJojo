@@ -132,10 +132,13 @@ img{
 .sidelist li span{
     margin-right: 1rem;
 }
-@media screen and (max-width:769px ){
+@media screen and (max-width:991px) {
     .hide{
         display: none;
     }
+}
+@media screen and (max-width:769px ){
+   
    
     .col-6{
     height: 100px;

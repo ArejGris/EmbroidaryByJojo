@@ -7,12 +7,14 @@
         <div class="card">
      
     <router-link :to="`/catigories/${c.id}`">
-     <img :src="c.popular_image" alt="" class="image" ></router-link>
-         
+     <img :src="c.popular_image" alt="" class="image" >
      <div class="title">
          {{ c.title }}
 
      </div>
+    </router-link>
+         
+     
         </div>
 
     
@@ -49,7 +51,7 @@ export default{
                     slidesToScroll: 2,
 
                 }},
-                { breakpoint: 600,
+                { breakpoint: 750,
                 settings: { 
                     slidesToShow: 3,
                     slidesToScroll: 2,
@@ -73,9 +75,14 @@ export default{
 .slick-slide{
     width: auto;
 }
-.card{height: 150px;
-    padding: 0;
+.card{
+    width: 100%;
+    height: 100%;
+    padding: 0px;
     position: relative;
+    border: none;
+    border-radius: 4px;
+    
    
 }
 .col-12{
@@ -88,24 +95,31 @@ export default{
     color: red;
 }
 .image{
-    width: 100%;
-    height: 100%;
 }
 img{
-    width: 190px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
 }
 a{
-    height: 100%;
+    width: 100%;
+    height: auto;
+    padding:20px 10px;
+    display: block;
+    text-align: center;
     background-color: #fcb80010;
+ 
 }
 
 .title{
-    position: absolute;
-    top: 80%;
-    width: 100%;
+    width: 90%;
     text-align: center;
     font-weight: 500;
-    padding-bottom: 1rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: black;
 }
 .category-slider a span{
     overflow: hidden;
@@ -118,9 +132,7 @@ a{
     justify-content: space-between;
 }
 a{
-    display: flex;
     text-decoration: none;
-    color: gray;
     font-family: Poppins;
 
 }
@@ -128,7 +140,9 @@ h3{
     font-size: 19px;
     white-space: nowrap;
 }
+
 @media  screen and (max-width:450px) {
+    
     h3{
         font-size: 15px;
         margin-right: 4px;
