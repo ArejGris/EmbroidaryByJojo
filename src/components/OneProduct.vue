@@ -452,6 +452,12 @@ a{
 .options .btn{
  
 }
+@media screen and (max-width:990px){
+    .lista{
+        
+        grid-template-columns: repeat(3,1fr);
+        }
+}
 @media screen and (max-width:765px) {
   .recent-product{
     display: none;

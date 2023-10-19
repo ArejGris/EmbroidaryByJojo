@@ -38,8 +38,8 @@ export default{
         z-index: 999;
         background-color: white;
         position: fixed;
-        top:28%;
-        left: .8rem;
+        top:35%;
+        left: 7%;
         width: 500px;
     }
     
@@ -57,13 +57,16 @@ export default{
     border: .1px solid rgba(128, 128, 128, 0.295);
 
     border-bottom: none;
-    padding: 1rem 2rem;
+    padding: .8rem 2rem;
     width: 100%;
     white-space: nowrap;
 }
 
 .sidelist li:not(:last-child){
     border-bottom: none;
+}
+.sidelist li:not(.color) a{
+    color: gray;
 }
 .sidelist li:hover {
     border-left: 1px solid  rgb(255, 196, 0);
