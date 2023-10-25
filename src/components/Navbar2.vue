@@ -2,10 +2,10 @@
 <nav class="nav navbar-nav navbar-light " id="navbar2">
     
     <div class="navbar">
-        <div class="navbar-brand">
+        <router-link to="/" class="navbar-brand">
         <img src="../assets/embroidary-logo.png" alt="logo" class="logo">
             
-        </div>
+        </router-link>
         <div class="nav-search">
             <input type="text" placeholder="I m looking for ...">
             
@@ -34,7 +34,6 @@
       
     </div>
 </nav>
-<v-divider></v-divider>
 </template>
 <script>
 export default{

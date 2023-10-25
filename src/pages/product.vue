@@ -5,7 +5,7 @@
         <div class="head">
   <h4 class="t1">{{ page }}</h4><router-link class="t2" to="/products">more products<span class="icon mdi mdi-name mdi-arrow-right"></span></router-link>
 </div>
-  <v-divider></v-divider>
+ <div class="divider"></div>
 <ul  class="slick-slider slick-slider1" ref="slider1" id="slider">
   <li v-for="prod in products" :key="prod.id">
     <router-link :to="`/product/${prod.id}`">  <Cart3 :id="prod.id" :img="prod.image_190x230" :price="prod.price" :product-name="prod.product_name"/></router-link>
@@ -23,6 +23,11 @@
 <style >
 h6{
   white-space: nowrap;
+}
+.divider{
+  width: 100vw;
+  height: 1px;
+  background-color: gray;
 }
 .slick-prev,.slick-next,.slick-arrow{
   z-index: -9999;

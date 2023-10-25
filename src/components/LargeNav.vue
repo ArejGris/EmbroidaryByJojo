@@ -59,6 +59,9 @@
     </nav>
 </template>
 <style scoped>
+a{
+    cursor: pointer;
+}
 .b1{
    padding-left: 2rem ;
 }
@@ -73,9 +76,10 @@ ul.navbar-nav{
 }
 #pencil{
     transform: rotateZ(90deg);
-    margin-right: 1px;
+    margin-right: 7px;
     margin-bottom: 5px;
 }
+
 .img-svg{
     width: 30px;
 }
@@ -99,6 +103,7 @@ ul.navbar-nav{
 }
 .nav-item h6{
     white-space: nowrap;
+    line-height: 30px;
 }
 a{
     font-size: 16px;

@@ -37,7 +37,7 @@ export default{
     .sidebar{
         z-index: 999;
         background-color: white;
-        position: fixed;
+        position: absolute;
         top:35%;
         left: 7%;
         width: 500px;

@@ -40,6 +40,7 @@
 .nav{
     height: 60px;
     background-color: rgba(128, 128, 128, 0.329);
+    padding: 10px;
 }
 
 .us{
