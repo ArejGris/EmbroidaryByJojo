@@ -83,6 +83,10 @@ computed:{
 }
 </script>
 <style scoped>
+input[type="text"]{
+    background-color: white;
+    color:black
+}
 a{
     text-decoration: none;
 }

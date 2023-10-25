@@ -53,6 +53,8 @@ export default{
 }
 input{
     border: none;
+    background-color: white;
+    color:black
 }
 .navbar{
     width: 90%;

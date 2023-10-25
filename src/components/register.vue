@@ -80,6 +80,8 @@ input[type="text"]{
     border: 1px solid black;
     padding: 5px 10px;
     border-radius: 5px;
+    background-color: white;
+    color:black
 }
 form{
     margin-bottom: 3rem;
