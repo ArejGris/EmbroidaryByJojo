@@ -48,6 +48,7 @@ props:['img','title','price']
     justify-content: left;
     align-items:center;
     padding: 0;
+    overflow: hidden;
 }
 
 .img{
@@ -63,12 +64,16 @@ props:['img','title','price']
     background-color: red;
     color:white;
     top:10px;
-    left:-20px;
+    left:20px;
     font-size: 13px;
 
 }
 .img img{
     width: 100%;
+    transition: all .5s ease-in-out;
+}
+.img img:hover{
+transform: scale(1.1);
 }
 .icons{
     list-style: none;
