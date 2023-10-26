@@ -38,7 +38,7 @@
 
                            </div>
                            <div class="form-group"><span class="mdi mdi-name mdi-grid"  @click="showlist=false"></span></div>
-                         <div class="form-group"><span class="mdi mdi-name mdi-format-list-bulleted" @click="showlist=true"></span></div>
+                         <div class="form-group"><span class="mdi mdi-name mdi-format-list-bulleted red" @click="showlist=true"></span></div>
                         </form>
                       
                    </li>
@@ -89,6 +89,9 @@ ul{
     align-items: center;
     width: 100%;
     padding: 1rem;
+}
+.red{
+    color:red
 }
 #form{
     display: flex;

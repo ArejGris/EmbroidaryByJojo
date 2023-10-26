@@ -41,7 +41,7 @@
                            </select>
                        </form>
                            <div class="form-group"><span class="mdi mdi-name mdi-grid"  @click="showlist=false"></span></div>
-                         <div class="form-group"><span class="mdi mdi-name mdi-format-list-bulleted" @click="showlist=true"></span></div>
+                         <div class="form-group"><span class="mdi mdi-name mdi-format-list-bulleted red" @click="showlist=true"></span></div>
 
                     </div>
                 
@@ -51,13 +51,17 @@
             <ul v-if="showlist" class=" list">
                    <li v-for="p in products" :key="p.id">
                     
+                <router-link :to="`/product/${p.id}`">
                         <Cart4 :img="p.image_190x230" :title="p.product_name" :price="p.price"/>
-                    
+                    </router-link>
                   </li>
                 </ul>
                     <div class="cardgrid" v-else>
                     <div  v-for="p in products" :key="p.id">
+                        
+                <router-link :to="`/product/${p.id}`">
                     <Cart2 :img="p.image_190x230" :price="p.price" :product-name="p.product_name"/>
+                    </router-link>
                     </div>
                     </div>
         </div>
@@ -121,6 +125,9 @@ this.computeproducts(this.sort)
 
 </script>
 <style scoped>
+a{
+    text-decoration: none;
+}
 .icons{
     padding:0px 1rem;
 }
@@ -129,6 +136,9 @@ this.computeproducts(this.sort)
     height: 400px
 }
 .card{
+}
+.red{
+    color:red
 }
 .card-img{
     height:150px;
