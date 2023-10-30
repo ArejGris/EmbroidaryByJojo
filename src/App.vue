@@ -2,12 +2,12 @@
     <TopNav/>
     <Transition name="nav1">
         
-    <NavDrw1 v-if="navdrw" @click="deleteaction"/>
+    <NavDrw1 v-if="navdrw"  @close="deleteaction"/>
 
     </Transition>
     <Transition name="nav1">
 
-        <NavDrw2 v-if="navdrw2" @click="deleteaction"/>
+        <NavDrw2 v-if="navdrw2"  @close="deleteaction"/>
     </Transition>
     <Navbar2  />
     <LargeNav @send="toggle" class="hide"/>
