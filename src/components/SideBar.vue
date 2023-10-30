@@ -21,6 +21,9 @@ export default{
 
 <div class="sidebar" @click="clickme">
             <ul class="sidelist">
+                <li>
+                    <span data-v-3b91b666="" class="mdi mdi-view-dashboard-outline mdi-18px"></span> 
+                all offer</li>
                 <li v-for="cat in catigories" :key="cat.id">
                     <span data-v-3b91b666="" class="mdi mdi-view-dashboard-outline mdi-18px"></span> 
                     <router-link :to="`/catigories/${cat.id}`">{{ cat.title }}</router-link>
@@ -34,9 +37,7 @@ export default{
 </template>
 
 <style scoped>
-span+a{
-    text-decoration:none
-}
+
     .sidebar{
         z-index: 999;
         background-color: white;
@@ -60,11 +61,13 @@ span+a{
     border: .1px solid rgba(128, 128, 128, 0.295);
 
     border-bottom: none;
-    padding: .8rem 2rem;
+    padding: .6rem 2rem;
     width: 100%;
     white-space: nowrap;
 }
-
+.sidelist li:hover{
+    background-color:  #fcb80010;
+}
 .sidelist li:not(:last-child){
     border-bottom: none;
 }
@@ -73,6 +76,7 @@ span+a{
 }
 .sidelist li:not(.color) a{
     color: gray;
+    font-weight: 400;
     text-decoration: none;
 }
 .sidelist li:hover {

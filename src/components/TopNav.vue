@@ -25,7 +25,7 @@
             </li>
         </ul>
         <ul class="right-list ">
-            <li class="nav-item"><a href="tel:8801234567890">tel:8801234567890</a>
+            <li class="nav-item">call:<a href="tel:8801234567890">8801234567890</a>
             </li>
             <li class="nav-item">
                 <span class="mdi mdi-name mdi-map-marker-outline"></span>Track Order
@@ -37,6 +37,10 @@
     </nav>
 </template>
 <style scoped>
+a{
+    text-decoration: none;
+    color: black;
+}
 .nav{
     height: 60px;
     background-color: rgba(128, 128, 128, 0.329);

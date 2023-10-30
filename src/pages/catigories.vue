@@ -4,6 +4,8 @@
         <div class="col-lg-3  hide">
            <div class="sidebar">
             <ul class="sidelist">
+                <li>
+                    <span data-v-3b91b666="" class="mdi mdi-view-dashboard-outline mdi-18px"></span> all offer</li>
                 <li v-for="cat in catigories" :key="cat.id">
                     <span data-v-3b91b666="" class="mdi mdi-view-dashboard-outline mdi-18px"></span> 
                     <router-link :to="`/catigories/${cat.id}`">{{ cat.title }}</router-link>
@@ -111,13 +113,13 @@ img{
 .sidelist li{
     border: .1px solid rgba(128, 128, 128, 0.295);
     transition: all .3s ease-in-out;
-    padding: .8rem 2rem;
+    padding: .6rem 2rem;
     white-space: nowrap;
 }
 
 .sidelist li a:not(.color){
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 400;
     color: rgba(0, 0, 0, 0.675);
 }
 .sidebar li:not(:last-child){
