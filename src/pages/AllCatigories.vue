@@ -4,7 +4,7 @@
     <div class="divider"> </div>
     <div class="container-fluid">
         <div class="row " >
-            <div class=" col-lg-4 col-md-6 " v-for="cat in catigories" :key="cat.id">
+            <div class="col col-lg-4 col-md-6 " v-for="cat in catigories" :key="cat.id">
                 <div class="card d-flex">
                     <h3>{{cat.title}}</h3>
                     <router-link :to="`/catigories/${cat.id}`">
@@ -36,6 +36,9 @@ const catigories=computed(()=>{
 section{
     width:100vw ;
     height:auto ;
+}
+.col{
+    margin-bottom: 20px;
 }
 .divider{
     margin: 1rem;

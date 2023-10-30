@@ -26,8 +26,9 @@ h6{
 }
 .divider{
   width: 100%;
-  height: 1px;
-  background-color: gray;
+  height: .1px;
+  background-color: rgba(128, 128, 128, 0.185);
+  margin-bottom: 20px;
 }
 .slick-prev,.slick-next,.slick-arrow{
   z-index: -9999;
