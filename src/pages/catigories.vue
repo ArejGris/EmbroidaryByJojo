@@ -50,6 +50,9 @@ export default{
 }
 </script>
 <style scoped>
+a{
+    text-decoration: none;
+}
 ul{
     padding-left: 0;
 }

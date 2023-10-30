@@ -5,6 +5,7 @@
                 <h6>Popular Categories</h6>
                 <router-link class="t2" to="/categories">more categories<span class="icon mdi mdi-name mdi-arrow-right"></span></router-link>
 </div>
+<div class="divider"></div>
     <CatigoryList :categories="this.popularCat" />
     <product :products="this.todaydeals2" page="Today Deals"></product>
     
@@ -74,11 +75,12 @@ return store.latest_products
 }
 .cats{
     text-align: center;
-    background-color: rgba(128, 128, 128, 0.123);
+    padding: 10px;
+    background-color: rgba(128, 128, 128, 0.041);
     width: 100vw;
 }
 .cats .t{
-    margin: 10px auto;
+    margin: 30px auto;
     font-size: 19px;
     font-weight: 600;
 }
@@ -87,7 +89,12 @@ return store.latest_products
     justify-content: space-between;
     padding: 2rem;
 }
-
+.divider{
+    width:100%;
+    height: .1px;
+    background-color: rgba(128, 128, 128, 0.185);
+    margin-bottom: 20px;
+}
 @media screen and (max-width:700px){
  .t2,.browse h6{
     font-size: 13px;

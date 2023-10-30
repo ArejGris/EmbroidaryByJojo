@@ -70,8 +70,10 @@ a{
     height: 60px;
 }
 ul.navbar-nav{
+    width: 70%;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     margin: 0px 2rem;
 }
 #pencil{

@@ -2,7 +2,6 @@
     <div class="container">
         <div class="row">
 <div class="col-12">
-    <div class="divider"></div>
     <ul class="slick-slider" ref="slider2" id="slider">
 <li v-for="c in this.categories" :key="c.id">
         <div class="card">
@@ -87,12 +86,7 @@ export default{
     
    
 }
-.divider{
-    width:100%;
-    height: .1px;
-    background-color: rgba(128, 128, 128, 0.185);
-    margin-bottom: 20px;
-}
+
 .col-12{
     width: 100%;;
 }

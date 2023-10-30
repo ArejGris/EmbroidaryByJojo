@@ -34,6 +34,9 @@ export default{
 </template>
 
 <style scoped>
+span+a{
+    text-decoration:none
+}
     .sidebar{
         z-index: 999;
         background-color: white;
@@ -65,13 +68,18 @@ export default{
 .sidelist li:not(:last-child){
     border-bottom: none;
 }
+.sidelist li a{
+    text-decoration: none;
+}
 .sidelist li:not(.color) a{
     color: gray;
+    text-decoration: none;
 }
 .sidelist li:hover {
     border-left: 1px solid  rgb(255, 196, 0);
     color:  rgb(255, 196, 0);
 }
+
 .sidelist li:hover a{
 
     color:  rgb(255, 196, 0);

@@ -134,6 +134,9 @@ li.hide1{
 li.hide2{
     display: flex;
 }
+.hide1 ,.hide2{
+    margin :1px 10px;
+}
 @media screen and (max-width:997px){
     li.hide1{
         display: flex;
