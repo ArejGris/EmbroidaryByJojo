@@ -205,9 +205,8 @@ align-items: center;
     margin-right: 1rem;
 }
 .cardgrid{
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: repeat(4,1fr);
+    display:flex;
+    flex-wrap: wrap;
     gap: 10px;
 
 }

@@ -1,7 +1,7 @@
 <template>
     <section>
         <div class="row d-flex align-items-top">
-            <div class="col-md-4 col-lg-3">
+            <div class="col-md-4 col-lg-3 filter-area">
                
                 <SideList/>
             
@@ -148,12 +148,12 @@ display: flex;
     height: 40px;
 }
 .cardgrid{
-    display: grid;
+    display:flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    grid-template-rows: auto;
-    grid-template-columns: repeat(4,1fr);
     gap: 1px;
+    overflow: hidden;
 
 }
 @media screen and (max-width: 920px) {

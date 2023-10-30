@@ -87,6 +87,11 @@ this.show=value
 margin-bottom: .7rem;
 border: 1px solid rgba(128, 128, 128, 0.103);
 }
+@media screen and (min-width:1400px){
+    .card{
+        width: 300px;
+    }
+}
     .card-body{
 
     }
