@@ -25,7 +25,7 @@ h6{
   white-space: nowrap;
 }
 .divider{
-  width: 100vw;
+  width: 100%;
   height: 1px;
   background-color: gray;
 }

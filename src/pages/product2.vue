@@ -1,10 +1,15 @@
 <template>
-  <section>
-    <div class="head">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="head">
   <h4 class="t1">{{ page }}</h4><router-link class="t2" to="/products">more products<span class="icon mdi mdi-name mdi-arrow-right"></span></router-link>
 </div>
-  <v-divider></v-divider>
+<div class="divider"></div>
 <ul  class="slick-slider1" >
+<li class="long">
+  <img src="../assets/default-image-405x745.png" alt="">
+</li>
 
   <li >
     <router-link :to="`/product/${products[0].id}`">  <Cart3 :id="products[0].id" :img="products[0].image_190x230" :price="products[0].price" :product-name="products[0].product_name"/></router-link>
@@ -13,10 +18,19 @@
     <router-link :to="`/product/${products[1].id}`">  <Cart :id="products[1].id" :img="products[1].image_190x230" :price="products[1].price" :product-name="products[1].product_name"/></router-link>
    </li>
 </ul>
-  </section>
 
+
+      </div>
+    </div>
+  </div>
+   
 </template>
 <style >
+.divider{
+  width: 100%;
+  height: 1px;
+  background-color: gray;
+}
 h6{
   white-space: nowrap;
 }
@@ -29,14 +43,14 @@ h6{
 .slick-slider1 li{
   margin-left: 10px;
   margin-right: 10px;
-  width: 200px;
+
 }
 @media screen and (max-width:370px){
   .slick-slider1 li{
   padding: 0;
   margin-left: 10px;
   margin-right: 10px;
-  width: 150px;
+
 }
 }
 @media screen and (max-width:300px){
@@ -47,7 +61,7 @@ padding: 1px;
 }
 }
 .slick-slider1 .slick-slide{
-  width: 200px;
+
 }
 
 
@@ -100,11 +114,16 @@ section{
   height: 500px;
   overflow: hidden;
   text-align: center;
-  background: url(../assets/default-image-405x745.png)no-repeat center center;
-  background-size: contain;
 }
 .long img{
+  height: 100%;
+  width: 100%;
   margin:0px  auto;
+}
+@media screen and (max-width:1000px){
+  .long {
+    display: none;
+  }
 }
 a{
   text-decoration: none;
