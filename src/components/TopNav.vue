@@ -66,6 +66,10 @@ ul.left-list{
 ul.right-list{
     margin-left: auto;
 }
+ul.right-list li{
+    
+    border-left: 1px solid gray;
+}
 @media screen and (max-width:820px){
     .nav{
         height: 120px;

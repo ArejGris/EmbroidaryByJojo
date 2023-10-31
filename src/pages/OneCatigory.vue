@@ -64,6 +64,8 @@
                     </router-link>
                     </div>
                     </div>
+                    
+                    <button class="btn btn-dark" @click="addMore" v-if="this.products.length>10">show more</button>
         </div>
        </div>
     
@@ -96,6 +98,12 @@ const catigory=catigories.find(c=>c.id===Number(this.id))
         }
     },
 methods:{
+    addMore(){
+const store=useMyStore2()
+const addationalP=store.moreproducts
+this.products=this.products.concat(addationalP)
+
+    },
         computeproducts(sort){
             
             const store=useMyStore2()
@@ -208,7 +216,14 @@ align-items: center;
     display:flex;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 1rem;
 
+}
+.btn{
+    margin-bottom: 2rem;
+    text-transform: uppercase;
 }
 @media screen and (max-width:500px){
     ul{
