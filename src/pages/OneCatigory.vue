@@ -65,7 +65,7 @@
                     </div>
                     </div>
                     
-                    <button class="btn btn-dark" @click="addMore" v-if="this.products.length>10">show more</button>
+                    <button class="btn btn-dark" @click="addMore" v-if="(this.products.length>10)&&isBtnShow">show more</button>
         </div>
        </div>
     
@@ -83,6 +83,7 @@ export default{
 },
 data(){
 return{
+    isBtnShow:true,
     sort:1,
     showlist:true,
     products:[]
@@ -102,6 +103,7 @@ methods:{
 const store=useMyStore2()
 const addationalP=store.moreproducts
 this.products=this.products.concat(addationalP)
+this.isBtnShow=false
 
     },
         computeproducts(sort){
@@ -160,6 +162,9 @@ font-size: 13px;
     display: flex;
     justify-content: space-around;
     
+}
+.mdi{
+    cursor: pointer;
 }
 .icons div{
     cursor: pointer;

@@ -62,7 +62,7 @@
                     </router-link>
                    </div>
                    </div>
-                   <button class="btn btn-dark btn-show" @click="showmore">show more</button>
+                   <button class="btn btn-dark btn-show" @click="showmore" v-if="isBtnShow">show more</button>
            </div>
        </div>
 
@@ -131,7 +131,9 @@ ul{
     width:60%;
     height: 300px;
 }
-
+.mdi{
+    cursor: pointer;
+}
 .list-group{
     width:40%
 }
@@ -140,6 +142,10 @@ ul{
 }
 .list{
 list-style:none;
+}
+.list li{
+    
+    margin-bottom: 10px;
 }
 .card1{
 display: flex;
@@ -240,6 +246,7 @@ export default{
 },
 data(){
 return{
+    isBtnShow:true,
     showlist:true,
   sort:1,
   products:[]
@@ -272,15 +279,8 @@ const catigory=catigories.find(c=>c.id===Number(this.id))
         showmore(){
             const store=useMyStore2()
             this.products=this.products.concat(store.moreproducts)
-           /*  var alllp=[]
-            const unique=addedP.filter(p=>{
-                if(!alllp.some(p)){
-                    alllp.push(p)
-                    return true
-                } else{
-                return false}
-             })
-this.products=unique */
+            this.isBtnShow=false
+          
         }
     },
     mounted(){

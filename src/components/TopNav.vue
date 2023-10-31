@@ -42,9 +42,9 @@ a{
     color: black;
 }
 .nav{
-    height: 60px;
-    background-color: rgba(128, 128, 128, 0.329);
-    padding: 10px;
+    height: 50px;
+    background-color: #f5f5f5;
+    padding:3px 10px;
 }
 
 .us{
@@ -68,11 +68,11 @@ ul.right-list{
 }
 ul.right-list li{
     
-    border-left: 1px solid gray;
+    border-left: 1px solid rgba(128, 128, 128, 0.205);
 }
 @media screen and (max-width:820px){
     .nav{
-        height: 120px;
+        height: 100px;
         display: flex;
         flex-wrap: wrap;
     }
