@@ -1,5 +1,6 @@
 <template>
     <section class="sec">
+        <img src="../assets/default-image-320x520.png" alt="">
         <form class="form">
     
     <h1>SIGN IN</h1>
@@ -32,9 +33,17 @@
 </template>
 <style scoped>
 .sec{
+    padding: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+h1{
+    font-size: 23px;
+    font-weight: 600;
+}
+img{
+    margin-left: 10px;
 }
 .form-group{
     margin-bottom: 1rem;
@@ -54,9 +63,13 @@ a{
     text-decoration: none;
     color: black;
 }
-.f{width: 50%;
-    margin-left: 1rem;
+.f{width: 40%;
+    margin-left: 3rem;
     display: inline-block;
+    font-weight: 400;
+}
+.f:hover{
+    color:red
 }
 button{
     width: 100%;
@@ -72,15 +85,26 @@ input[type="text"]{
     padding: 5px 10px;
     border-radius: 5px;
 }
+i{
+        margin-right: 9px;
+    }
 .form{
-    margin-bottom: 3rem;
+    width: auto;
+    height: 520px;
     padding: 3rem;
-    border-radius: 10px;
-    box-shadow: 0px 1px 8px rgba(0,0,0,.8);
+    border-radius: 3px;
+    box-shadow: 0px 1px 1px rgba(0,0,0,.8);
 }
 @media screen and (min-width:900px) {
     .form{
         width:40%;
     }
+    
+}
+@media screen and (max-width:900px) {
+    img{
+       display: none;
+    }
+    
 }
 </style>
