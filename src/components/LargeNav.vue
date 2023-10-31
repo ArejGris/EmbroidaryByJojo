@@ -105,7 +105,8 @@ ul.navbar-nav{
 }
 .nav-item h6{
     white-space: nowrap;
-    line-height: 30px;
+    line-height: 1.3;
+    font-weight: 400;
 }
 a{
     font-size: 15px;

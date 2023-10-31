@@ -149,11 +149,19 @@ p{
 }
 .list8{
     display: flex;
+    margin-top: 1rem;
 }
 .list8 li a{
     font-weight: 300;
     text-decoration: none;
     color: rgba(197, 199, 201, 0.904);
+    transition: all .4s ease-in-out;
+}
+.list8 li{
+    margin-left: 20px;
+}
+.list8 li a:hover{
+    color:red
 }
 .connect li{
     display: flex;

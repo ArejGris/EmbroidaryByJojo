@@ -117,7 +117,7 @@ section{
 }
 .long img{
   height: 100%;
-  width: 100%;
+  width: 98%;
   margin:0px  auto;
 }
 @media screen and (max-width:1000px){

@@ -46,7 +46,7 @@ export default{
 </script>
 <style scoped>
 .nav{
-    height: 100px;
+    display: flex;
     align-items: center;
     overflow: hidden;
     width: 100%;

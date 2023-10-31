@@ -77,12 +77,12 @@ export default{
 }
 .card{
     width: 97%;
-    height: 100%;
+    height: 98%;
     padding: 0px;
     position: relative;
     border: none;
     border-radius: 4px;
-    box-shadow: 0px 1px 2px gray;
+    border: 1px solid gray;
     
    
 }
