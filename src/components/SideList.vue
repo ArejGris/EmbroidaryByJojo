@@ -61,11 +61,11 @@
     </div>
 </template>
 <script>
-import { useMyStore } from '../store';
+import { useMyStore2 } from '../store2';
 export default{
 computed:{
     catigries(){
-        const store=useMyStore()
+        const store=useMyStore2()
         const products=store.allproducts
         const cats=store.categories
         const catnumber=cats.map(cat=>{

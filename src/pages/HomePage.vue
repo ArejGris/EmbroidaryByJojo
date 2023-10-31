@@ -26,7 +26,6 @@ import product from './product.vue';
 import product2 from './product2.vue';
 import catigories from './catigories.vue';
 import CatigoryList from '../components/CatigoryList.vue';
-import { useMyStore } from '../store';
 import { useMyStore2 } from '../store2';
 export default{
     components:{

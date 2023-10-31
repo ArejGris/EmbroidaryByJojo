@@ -17,10 +17,10 @@
 
 </template>
 <script setup>
-import { useMyStore } from '../store';
+import { useMyStore2 } from '../store2';
 import {computed} from 'vue'
 const catigories=computed(()=>{
-    const store=useMyStore()
+    const store=useMyStore2()
     const catigories=store.categories
     return catigories
 })

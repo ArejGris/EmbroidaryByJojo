@@ -40,11 +40,11 @@
 </div>
 </template>
 <script >
-import { useMyStore } from '../store';
+import { useMyStore2 } from '../store2';
 export default{
     computed:{
        catigories(){
-    const store=useMyStore()
+    const store=useMyStore2()
     return store.categories
 }
     }

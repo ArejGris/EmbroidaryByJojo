@@ -75,7 +75,7 @@ padding: 1px;
 <script>
 import Cart3 from '../components/Cart3.vue'
 import Cart from '../components/Cart.vue'
-import { useMyStore } from '../store'
+import { useMyStore2 } from '../store2'
 export default{
 props:['products','page'],
     mounted() {
@@ -91,7 +91,7 @@ props:['products','page'],
     },
     computed:{
        products1(){
-        const store=useMyStore()
+        const store=useMyStore2()
         return store.products
 
       }

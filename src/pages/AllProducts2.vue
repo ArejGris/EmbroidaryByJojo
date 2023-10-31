@@ -62,6 +62,7 @@
                     </router-link>
                    </div>
                    </div>
+                   <button class="btn btn-dark btn-show" @click="showmore">show more</button>
            </div>
        </div>
 
@@ -155,6 +156,9 @@ display: flex;
     gap: 1px;
     overflow: hidden;
 
+}
+.btn-show{
+    text-transform: uppercase;
 }
 @media screen and (max-width: 920px) {
     
@@ -264,6 +268,19 @@ const catigory=catigories.find(c=>c.id===Number(this.id))
             p=products.sort((a,b)=>{return (Number(b.id)- Number(a.id))})}
          this.products=p
 
+        },
+        showmore(){
+            const store=useMyStore2()
+            this.products=this.products.concat(store.moreproducts)
+           /*  var alllp=[]
+            const unique=addedP.filter(p=>{
+                if(!alllp.some(p)){
+                    alllp.push(p)
+                    return true
+                } else{
+                return false}
+             })
+this.products=unique */
         }
     },
     mounted(){
