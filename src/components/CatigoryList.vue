@@ -72,8 +72,9 @@ export default{
 .slick-slider{
     width: 100%;
 }
-.slick-slide{
+.slick-slider .slick-slide{
     width: auto;
+    margin-left: 10px;
 }
 .card{
     width: 97%;

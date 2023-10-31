@@ -47,7 +47,8 @@
     }
     h1{
     font-size: 23px;
-    font-weight: 600;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
     }
     .form-group{
         margin-bottom: 1rem;

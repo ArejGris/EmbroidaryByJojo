@@ -64,6 +64,7 @@ padding: 1px;
 }
 .slick-slider1 .slick-slide{
   width: 200px;
+  margin-left: 20px;
 }
 
 
