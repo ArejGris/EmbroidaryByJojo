@@ -130,7 +130,7 @@ a{
 }
 .head{
   position: relative;
-  width: 99vw;
+  width: 99%;
   display: flex;
   align-items: center;
   padding: 1rem;
