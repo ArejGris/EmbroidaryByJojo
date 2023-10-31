@@ -42,9 +42,10 @@ export default{
         z-index: 999;
         background-color: white;
         position: absolute;
-        top:35%;
+        top:33%;
         left: 7%;
         width: 500px;
+        font-family: 'Poppins';
     }
     
 .sidebar{

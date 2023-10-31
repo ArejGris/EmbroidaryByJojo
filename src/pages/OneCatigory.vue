@@ -8,7 +8,7 @@
 
         </div>
         <div class="col-md-8 col-lg-9">
-            <img src="../assets/img.jpg" alt="" class="img">
+            <img src="../assets/default-image-835x200.png" alt="" class="img">
             
 <v-spacer></v-spacer>
         
@@ -141,7 +141,6 @@ a{
 }
 .img{
     width:100%;
-    height: 400px
 }
 .card{
 }
@@ -172,7 +171,7 @@ font-size: 13px;
 margin-left: 10px;
 }
 .iconright span{
-    font-size: 26px;
+    font-size: 20px;
 }
 .cc{
     margin-top: 2rem;
@@ -199,6 +198,9 @@ list-style:none;
 margin-left: auto;
 margin-right: 1rem;
 width: 100%;
+}
+.list li{
+    margin-bottom: 1rem;
 }
 .card1{
 display: flex;

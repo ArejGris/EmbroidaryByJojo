@@ -19,11 +19,12 @@
             <li>
                 <img src="../assets/phone.svg" alt=""> 
                 <div class="nav-item1">
-        <router-link class="nav-link" to="/register">
-            Register
-        </router-link>
+        
         <router-link class="nav-link" to="/sign-in">
         sign in
+        </router-link>
+        <router-link class="nav-link" to="/register">
+            Register
         </router-link>
         </div>
     </li>
@@ -50,6 +51,7 @@ export default{
     align-items: center;
     overflow: hidden;
     width: 100%;
+    font-family: 'Poppins';
 }
 input{
     border: none;
