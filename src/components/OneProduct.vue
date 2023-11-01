@@ -29,9 +29,9 @@
         <div class="options">
         <button class="btn btn-dark"><i class="fa fa-suitcase"></i> ADD TO CARD</button>
         <button class="btn btn-light"><i class="fa-solid fa-cart-shopping"></i> BUY NOW</button>
-        <button>
+        <button class="btn btn-light2">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 40.095 37.193">
-                <path id="iconmonstr-random-thin" d="M34.328,5.7,29.853,2.2,30.906,1,38,6.563l-7.087,5.573-1.053-1.2,4.66-3.646H27.927c-5.619.068-8.241,5.417-10.951,11.173,2.71,5.754,5.332,11.1,10.951,11.171H34.42l-4.567-3.575,1.053-1.2L38,30.427,30.913,36l-1.053-1.2,4.569-3.575H27.917c-6.172-.076-9.163-5.36-11.819-10.91C13.425,25.9,10.408,31.2,4.155,31.227H0V29.636H4.152c5.7-.022,8.345-5.388,11.07-11.171C12.5,12.68,9.855,7.314,4.152,7.292H0V5.7H4.155c6.253.025,9.27,5.326,11.943,10.91C18.754,11.061,21.745,5.778,27.917,5.7h6.411Z" ></path></svg>compare</button>
+                <path id="iconmonstr-random-thin" d="M34.328,5.7,29.853,2.2,30.906,1,38,6.563l-7.087,5.573-1.053-1.2,4.66-3.646H27.927c-5.619.068-8.241,5.417-10.951,11.173,2.71,5.754,5.332,11.1,10.951,11.171H34.42l-4.567-3.575,1.053-1.2L38,30.427,30.913,36l-1.053-1.2,4.569-3.575H27.917c-6.172-.076-9.163-5.36-11.819-10.91C13.425,25.9,10.408,31.2,4.155,31.227H0V29.636H4.152c5.7-.022,8.345-5.388,11.07-11.171C12.5,12.68,9.855,7.314,4.152,7.292H0V5.7H4.155c6.253.025,9.27,5.326,11.943,10.91C18.754,11.061,21.745,5.778,27.917,5.7h6.411Z" ></path></svg>Remove</button>
 
         </div>
     </div>
@@ -216,6 +216,9 @@ Cart2
 }
 </script>
 <style scoped>
+ul{
+    list-style: none;
+}
 .card{
     border:1px solid rgba(128, 128, 128, 0.116);
     margin-bottom: 1rem;
@@ -314,14 +317,17 @@ section{
     padding-bottom: 1rem;
 }
 .icon{
-    width: 100%;
+   width: fit-content;
     text-align: left;
     margin-left: 1rem;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: fit-content;
+    padding: 0px 10px;
 }
 .icon img{
-
     width: 69px;
-    height: 128px;
 }
 .price{
     display: flex;
@@ -330,8 +336,28 @@ section{
 display: inline;
     color: red;
 }
+.options{
+    display: flex;
+    justify-content: flex-start;
+}
 .options *{
    margin: 10px;
+}
+.btn{
+    font-size: 13px;
+    padding: 3px 5px;
+    text-transform: uppercase;
+}
+.btn-light{
+    background-color: white;
+    border: 1px solid black;
+}
+.btn-light:hover{
+    background-color: black;
+    color: white;
+}
+.btn-light2:hover{
+    color: red;
 }
 details .card{
     margin-top: 1rem;
@@ -368,6 +394,7 @@ ul.icons li{
 }
 .fs i{
     color: rgb(29, 29, 172);
+    transition: all .4s ease-in-out;
 }
 .fs:hover{
     color: white;
@@ -378,6 +405,8 @@ li:hover i{
 }
 .wp i{
     color: rgb(16, 230, 16);
+    
+    transition: all .4s ease-in-out;
 }
 .wp:hover{
     color: white;
@@ -385,13 +414,17 @@ li:hover i{
 }
 .tw i{
     color: rgb(0, 225, 255);
+    
+    transition: all .4s ease-in-out;
 }
 .tw:hover{
     color: white;
     background-color: rgb(0, 225, 255);
 }
 .ln i{
-    color:rgb(30, 30, 240)
+    color:rgb(30, 30, 240);
+    
+    transition: all .4s ease-in-out;
 }
 .ln:hover{
     color:white;

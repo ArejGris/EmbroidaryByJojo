@@ -7,17 +7,17 @@
 </div>
 <div class="divider"></div>
     <CatigoryList :categories="this.popularCat" />
-    <product :products="this.todaydeals2" page="Today Deals"></product>
+    <product :products="this.todaydeals2" page="Today Deals" x="0"></product>
     
     
     <product2 :products="this.Acceccoirs" page="Accessoirs"></product2>
     
-    <product :products="this.bestproducts" page="Best Selling Products"/>
+    <product :products="this.bestproducts" page="Best Selling Products" x="6"/>
     <div class="cats">
 <div class="t">Top Categories of the mounth</div>
         <CatigoryList :categories="this.topCat"/>
     </div>
-    <product :products="this.latestProducts" page="Latest Products"></product>
+    <product :products="this.latestProducts" page="Latest Products" x="0"></product>
        
 </section>
 </template>
@@ -67,6 +67,9 @@ return store.latest_products
 .t2{
     white-space: nowrap;
 }
+.t2:hover{
+    color:red
+}
 @media screen and (max-width:700px){
  .t2,.browse h6{
     font-size: 13px;
@@ -84,9 +87,15 @@ return store.latest_products
     font-weight: 600;
 }
 .browse{
+    width: 80%;
     display: flex;
     justify-content: space-between;
-    padding: 2rem;
+    padding-top: 2rem;
+    margin: 0px auto;
+}
+.browse h6{
+    font-family: 'Poppins' sans-serif;
+    font-weight: 600;
 }
 .divider{
     width:100%;
@@ -99,7 +108,7 @@ return store.latest_products
     font-size: 13px;
  }   
  .browse{
-    padding:2rem 0px;
+   padding-top: 2rem;
  }
 }
 a{

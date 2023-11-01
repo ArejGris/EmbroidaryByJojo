@@ -58,7 +58,7 @@
     font-family: 'Poppins', sans-serif;
     }
     .form-group{
-        margin-bottom: 1rem;
+        margin-bottom: 1.4rem;
         width: 320px;
     }
     .form-group label{

@@ -101,6 +101,7 @@ props:['products','page'],
 </script>
 <style scoped>
 ul{
+  list-style: none;
   padding-left: 0px;
   width: 100%;
 }
@@ -140,7 +141,8 @@ a{
 .t1{
   text-align: left;
   margin-left: 15px;
-  font-size: 18px;
+  font-family: 'Poppins' sans-serif;
+  font-weight: 600;
   margin-right: 1rem;
   white-space: nowrap;
 }

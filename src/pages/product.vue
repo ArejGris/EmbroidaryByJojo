@@ -31,8 +31,12 @@ h6{
   margin-bottom: 20px;
 }
 .slick-prev,.slick-next,.slick-arrow{
-  z-index: -9999;
+  z-index: 9999;
 }
+.slick-prev{
+  left: -15px;
+}
+
 .slick-track{
 }
   .slick-slider1{
@@ -79,14 +83,14 @@ import $ from "jquery"
 import Cart3 from '../components/Cart3.vue'
 import { useMyStore2 } from '../store2'
 export default{
-props:['products','page'],
+props:['products','page','x'],
     mounted() {
       document.getElementById('slider').style.width="auto"
       $(this.$refs.slider1).slick({
-            
+           initialSlide: this.x,
             slidesToShow: 6,
-            slidesToScroll: 2,
-            arrow:false,
+            slidesToScroll: 4,
+            arrows:true,
             responsive:[
                { breakpoint: 1024,
                 settings: { 
@@ -148,12 +152,17 @@ a{
 .t1{
   text-align: left;
   margin-left: 15px;
-  font-size: 18px;
+  font-size: 20px;
+  font-family: 'Poppins' sans-serif;
+  font-weight: 600;
   margin-right: 1rem;
   white-space: nowrap;
 }
 .t2{
   color: rgba(0, 0, 0, 0.548);
+}
+.t2:hover{
+  color: red;
 }
 @media screen and (min-width:1400px) {
   .t1{
