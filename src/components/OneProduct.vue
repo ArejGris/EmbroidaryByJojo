@@ -48,13 +48,16 @@
         <div class="divider"></div>
         <ul>
             <li v-for="prod in products" :key="prod.id" class="card1">
-                
-                <img :src="prod.image_190x230" alt="">
+                <router-link :to="`/product/${prod.id}`">
+                    <img :src="prod.image_190x230" alt="">
                 <div class="r-product">
                     <h6>{{ prod.product_name}}</h6>
                     <span>${{ prod.price }}</span>
                 </div>
 
+            
+        </router-link>
+                
                 
             </li>
         </ul>
@@ -227,6 +230,10 @@ ul{
     
     border:1px solid rgba(128, 128, 128, 0.295);
     border-radius: 3px;
+}
+.card1 a{
+    color:black;
+    display:flex
 }
 .count{
     width: 100%;
