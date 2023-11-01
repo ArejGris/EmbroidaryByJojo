@@ -44,15 +44,15 @@
     
     </div>
     <div class="recent-product" >
-        <h3>Recent Product</h3>
-        <v-divider></v-divider>
+        <h4>Recent Products</h4>
+        <div class="divider"></div>
         <ul>
             <li v-for="prod in products" :key="prod.id" class="card1">
                 
                 <img :src="prod.image_190x230" alt="">
                 <div class="r-product">
                     <h6>{{ prod.product_name}}</h6>
-                    <span>{{ prod.price }}</span>
+                    <span>${{ prod.price }}</span>
                 </div>
 
                 
@@ -239,6 +239,15 @@ ul{
     padding-top: 10px;
     background-color: rgba(128, 128, 128, 0.205);
 }
+.recent-product{
+    text-align: left;
+}
+.recent-product h4{
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+}
 .tab-pane h1{
     margin-left: 10px;
     width: 90%;
@@ -343,10 +352,17 @@ display: inline;
 .options *{
    margin: 10px;
 }
+.divider{
+    height: 1px ;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.171);
+    margin-left: 2rem;
+}
 .btn{
     font-size: 13px;
-    padding: 3px 5px;
+    padding: 0px 5px;
     text-transform: uppercase;
+    transition: all .3s ease-in-out;
 }
 .btn-light{
     background-color: white;
@@ -355,6 +371,10 @@ display: inline;
 .btn-light:hover{
     background-color: black;
     color: white;
+}
+.btn-dark:hover{
+    color: black;
+    background-color: white;
 }
 .btn-light2:hover{
     color: red;
