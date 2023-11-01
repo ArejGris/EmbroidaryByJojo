@@ -83,8 +83,14 @@ computed:{
 }
 </script>
 <style scoped>
+ul{
+    list-style: none;
+    align-items: left;
+}
 a{
+    color:black;
     text-decoration: none;
+    font-size: 12px;
 }
 input[type="text"]{
     background-color: white;
@@ -92,6 +98,13 @@ input[type="text"]{
 }
 a{
     text-decoration: none;
+}
+h6+span{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.list-group li{
+    font-weight: 700;
 }
 .list-group li.list-group-item{
     padding: 1rem;

@@ -1,4 +1,5 @@
 <template>
+    <div class="divider"></div>
     <section class="sec">
         <img src="../assets/default-image-320x520.png" alt="">
         <form>
@@ -31,7 +32,7 @@
            <div class="form-group"> 
             <button type="submit" class="btn btn-dark">SIGN UP</button>
            </div>
-           <p>I have an account?<span><a>sign in</a></span></p>
+           <p>I have an account?<span><router-link to="/sign-in">sign in</router-link></span></p>
         </form>
     </section>
   
@@ -39,6 +40,12 @@
     
     </template>
     <style scoped>
+    .divider{
+        width: 100%;
+        height: 1px;
+        background-color: rgba(128, 128, 128, 0.144);
+    }
+
     .sec{
         display: flex;
         justify-content: center;
@@ -47,7 +54,7 @@
     }
     h1{
     font-size: 23px;
-    font-weight: 900;
+    font-weight: 600;
     font-family: 'Poppins', sans-serif;
     }
     .form-group{
@@ -68,6 +75,8 @@
     a{
         text-decoration: none;
         color: black;
+        font-family: 'Poppins' sans-serif;
+        font-weight: 600;
     }
     .f{width: 50%;
         white-space: nowrap;
@@ -103,7 +112,7 @@ form{
         width:auto;
     }
 }
-@media screen and (max-width:900px) {
+@media screen and (max-width:769px) {
     img{
        display: none;
     }

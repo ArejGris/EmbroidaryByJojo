@@ -30,7 +30,7 @@ list-style: none;
     color:white  
 }
 a img{
-    width: 30px;
+    width: 28px;
 }
 @media screen and (max-width:500px){
   .nav-item{
