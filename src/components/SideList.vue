@@ -19,19 +19,29 @@
                
             </li>
             <li class="list-group-item">
-                <div class="d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#item1">
+                <div class="d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#item5">
                     Brand
-                    <i class="fas fa-chevron-down"></i> </div>
-                    <div id="item1" class="collapse"><p>cat</p></div>
-               
-            </li>
-            <li class="list-group-item">
-                <div class="d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#item2">
-                    Price
                     <i class="fas fa-chevron-down"></i></div>
-                    <div id="item2" class="collapse"><input type="text" placeholder="Min"><div class="op">-</div><input type="text" placeholder="Max"></div>
+                    <div id="item5" class="collapse"><p>cat</p></div>
                 
             </li>
+            <li class="list-group-item">
+                <div class="d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#item1">
+                    Price
+                    <i class="fas fa-chevron-down"></i> </div>
+                    <div id="item1" class="collapse ">
+                        <div class="input1">
+                            <input type="text" placeholder="Min"><div class="op">-</div><input type="text" placeholder="Max">
+                    
+                    <div class="range-slider"><input type="range" min="0" max="999" step="1" id="min_range"> <input type="range" min="100" max="999" step="1" id="max_range"></div>
+   
+
+                        </div>
+                       
+                    </div>
+               
+            </li>
+           
             <li class="list-group-item">
                 <div class="d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#item3">
                     Color
@@ -104,7 +114,7 @@ h6+span{
     margin-top: 5px;
 }
 .list-group li{
-    font-weight: 700;
+    font-weight: 600;
 }
 .list-group li.list-group-item{
     padding: 1rem;
@@ -120,11 +130,11 @@ h6+span{
     margin-left: .5rem;
     color: rgb(255, 196, 0);
 }
-#item2{
+.input1{
     display: flex;
     align-items: center;
 }
-#item2 input{
+.input1 input{
 width: 30%;
 border: 1px solid rgba(128, 128, 128, 0.253);
 border-radius: 3px;
@@ -142,5 +152,31 @@ margin-left: 10px;
     padding: 0px 10px;
     background-color: rgba(255, 0, 0, 0.192);
     border-radius:13px;
+}
+.rang-slider{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+}
+.rang-slider input{
+    position: absolute;
+    background-color: pink;
+    left: 0;
+    bottom: 0;
+}
+input[type=range] {
+    position: absolute;
+  
+    left: 0;
+    bottom: 10px;
+    -webkit-appearance: none;
+    width: 100%;
+    background: pink;
+    height: 3px;
+}
+input[type=range]::-webkit-slider-runnable-track{
+
 }
 </style>

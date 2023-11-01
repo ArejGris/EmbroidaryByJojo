@@ -10,7 +10,7 @@
         <div class="col-md-8 col-lg-9">
             <img src="../assets/default-image-835x200.png" alt="" class="img">
             
-<v-spacer></v-spacer>
+<div class="divider"></div>
         
          </div>
    

@@ -42,14 +42,14 @@ export default{
         z-index: 999;
         background-color: white;
         position: absolute;
-        top:33%;
+        top:30%;
         left: 7%;
-        width: 500px;
+        width: 300px;
         font-family: 'Poppins';
     }
     
 .sidebar{
-    width: 300px;
+    width: 280px;
 }
 .sidelist{
     list-style: none;
@@ -76,8 +76,9 @@ export default{
     text-decoration: none;
 }
 .sidelist li:not(.color) a{
-    color: gray;
-    font-weight: 400;
+    color:black;
+    font-size: 15px;
+    font-weight: 200;
     text-decoration: none;
 }
 .sidelist li:hover {
