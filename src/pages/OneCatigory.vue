@@ -3,7 +3,7 @@
 <v-divider></v-divider>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-4 col-lg-3">
+        <div class="col-md-4 col-lg-3 gap1">
            <SideList/>
 
         </div>
@@ -237,5 +237,8 @@ align-items: center;
         padding-left: 0px;
     }
     
+}
+.gap1{
+    margin-bottom: 2rem;
 }
 </style>

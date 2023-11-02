@@ -31,12 +31,14 @@
                     <i class="fas fa-chevron-down"></i> </div>
                     <div id="item1" class="collapse ">
                         <div class="input1">
-                            <input type="text" placeholder="Min"><div class="op">-</div><input type="text" placeholder="Max">
-                    
-                    <div class="range-slider"><input type="range" min="0" max="999" step="1" id="min_range"> <input type="range" min="100" max="999" step="1" id="max_range"></div>
-   
+                           <div class="value">
+                            <input type="text" placeholder="Min" v-model="min"><div class="op">-</div><input type="text" placeholder="Max" v-model="max">
 
-                        </div>
+                           </div> 
+                    
+                    <div class="range-slider"><input type="range" min="0" max="999" step="1" id="min_range" class="slider" v-model="min"> <input type="range" min="0" max="999" step="1" id="max_range" class="slider slider2" v-model="max"></div>
+   
+                              </div>
                        
                     </div>
                
@@ -73,6 +75,12 @@
 <script>
 import { useMyStore2 } from '../store2';
 export default{
+    data(){
+return{
+min :50,
+max:70
+}
+    },
 computed:{
     catigries(){
         const store=useMyStore2()
@@ -130,11 +138,11 @@ h6+span{
     margin-left: .5rem;
     color: rgb(255, 196, 0);
 }
-.input1{
+.input1 .value{
     display: flex;
     align-items: center;
 }
-.input1 input{
+.value input[type=text]{
 width: 30%;
 border: 1px solid rgba(128, 128, 128, 0.253);
 border-radius: 3px;
@@ -153,12 +161,13 @@ margin-left: 10px;
     background-color: rgba(255, 0, 0, 0.192);
     border-radius:13px;
 }
-.rang-slider{
+.range-slider{
+    height: 30px;
     position: relative;
-    display: block;
     width: 100%;
-    height: 40px;
     margin-top: 10px;
+    
+    margin-bottom: 10px;
 }
 .rang-slider input{
     position: absolute;
@@ -167,16 +176,49 @@ margin-left: 10px;
     bottom: 0;
 }
 input[type=range] {
-    position: absolute;
   
     left: 0;
-    bottom: 10px;
     -webkit-appearance: none;
     width: 100%;
     background: pink;
     height: 3px;
 }
-input[type=range]::-webkit-slider-runnable-track{
-
+.slider2{
+ 
+    
 }
+input[type=range].slider2::-webkit-slider-runnable-track{
+   
+}
+
+.rang-slider{
+    position: relative;
+}
+.slider2{
+   
+}
+.slider2::-webkit-slider-thumb {
+display: block;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width:20px;
+  height: 20px;
+  background: white;
+  border-radius: 100%;
+  cursor: pointer;
+  border: 1px solid gray;
+  z-index:1
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: white;
+  cursor: pointer;
+  border-radius: 100%;
+  border: 1px solid gray;
+ 
+} 
 </style>
