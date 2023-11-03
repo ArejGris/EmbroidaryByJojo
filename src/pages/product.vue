@@ -46,7 +46,6 @@ h6{
 .slick-slider1 li{
   margin-left: 10px;
   margin-right: 10px;
-  width: 200px;
 }
 .slick-slide{
   width: auto;
@@ -56,7 +55,7 @@ h6{
   padding: 0;
   margin-left: 10px;
   margin-right: 10px;
-  width: 150px;
+
 }
 }
 @media screen and (max-width:300px){
@@ -67,7 +66,7 @@ padding: 1px;
 }
 }
 .slick-slider1 .slick-slide{
-  width: 200px;
+
   margin-left: 20px;
 }
 
@@ -85,9 +84,13 @@ import { useMyStore2 } from '../store2'
 export default{
 props:['products','page','x'],
     mounted() {
+      let n=0
+      if(this.x==6){
+        n=6
+      }
       document.getElementById('slider').style.width="auto"
       $(this.$refs.slider1).slick({
-           initialSlide: this.x,
+           initialSlide:n,
             slidesToShow: 6,
             slidesToScroll: 4,
             arrows:true,
@@ -98,7 +101,7 @@ props:['products','page','x'],
                     slidesToScroll: 2,
 
                 }},
-                { breakpoint: 700,
+                { breakpoint: 768,
                 settings: { 
                     slidesToShow: 3,
                     slidesToScroll: 2,
@@ -128,6 +131,7 @@ props:['products','page','x'],
 </script>
 <style scoped>
 ul{
+  list-style: none;
   padding-left: 0px;
   width: 100%;
 }

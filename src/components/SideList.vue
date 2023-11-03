@@ -162,12 +162,14 @@ margin-left: 10px;
     border-radius:13px;
 }
 .range-slider{
-    height: 30px;
+    height: 40px;
     position: relative;
     width: 100%;
     margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     
-    margin-bottom: 10px;
 }
 .rang-slider input{
     position: absolute;
@@ -176,15 +178,15 @@ margin-left: 10px;
     bottom: 0;
 }
 input[type=range] {
-  
+  position: absolute;
     left: 0;
     -webkit-appearance: none;
     width: 100%;
     background: pink;
     height: 3px;
 }
-.slider2{
- 
+input[type=range].slider2{
+ height: 0px;
     
 }
 input[type=range].slider2::-webkit-slider-runnable-track{

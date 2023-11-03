@@ -93,7 +93,7 @@ border: 1px solid rgba(128, 128, 128, 0.103);
     }
 }
     .card-body{
-
+text-align: center;
     }
 
 .card-img{

@@ -87,29 +87,26 @@ return{
     margin-right: auto;
         height: 200px;
         overflow: hidden;
-    position: absolute;
     padding:0px;
 }
 .card-img .img{
 }
 .card-body{
     width: 100%;
-    margin-top: 100%;
     display:flex;
     flex-direction: column;
     justify-content: center;
 }
 @media screen and(max-width:760px) {
-    .card{
-        height: 250px;
-    }
+   
     .card-img{
-       
         overflow: hidden;
        text-align: center;
        display: flex;
        align-items: center;
+       overflow: hidden;
     }
+    
 
 }
 .card-subtitle{
@@ -136,8 +133,10 @@ border-radius: 5px;
 padding: 5px 10px;
     width: 100px;
     position: absolute;
-    top:7%;
+    top:3%;
     left: 3%;
+    text-transform: uppercase;
+    font-size: 10px;
 }
 .img{
     height: 240px;
@@ -149,6 +148,7 @@ padding: 5px 10px;
     justify-content: center;
     overflow: hidden;
     align-items: center;
+   
 }
 img{
     height: 100%;
@@ -172,7 +172,6 @@ img:hover{
     display: none;
 }
 .card-body{
-    position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
