@@ -70,7 +70,7 @@ ul.right-list li{
     
     border-left: 1px solid rgba(128, 128, 128, 0.205);
 }
-@media screen and (max-width:820px){
+@media screen and (max-width:840px){
     .nav{
         height: 100px;
         display: flex;

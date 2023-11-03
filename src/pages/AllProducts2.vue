@@ -1,9 +1,10 @@
 <template>
     <section>
-        <div class="row d-flex align-items-top">
+        <div class="container">
+            <div class="row d-flex align-items-top">
             <div class="col-md-4 col-lg-3 filter-area">
                
-                <SideList/>
+                <SideList @min="setMin" @max="setMax" />
             
             </div>
             <div class="col-md-8 col-lg-9">
@@ -68,6 +69,9 @@
 
             </div>
         </div>
+
+        </div>
+       
 
      
     </section>
@@ -239,6 +243,7 @@ import { useMyStore2 } from '../store2';
 import Cart2 from '../components/Cart2.vue';
 import Cart4 from '../components/Cart4.vue';
 import SideList from '../components/SideList.vue';
+import { mdiTempleBuddhistOutline } from '@mdi/js';
 export default{
     props:['id'],
     components:{
@@ -249,6 +254,8 @@ return{
     isBtnShow:true,
     showlist:true,
   sort:1,
+  min:50,
+  max:999,
   products:[]
 }
 },
@@ -276,12 +283,36 @@ const catigory=catigories.find(c=>c.id===Number(this.id))
          this.products=p
 
         },
+        filteredproductswithMin(min){
+            this.computeproducts(this.sort)
+            this.products=this.products.filter(p=>{
+                if(p.price>min) return true
+                return false
+            })
+
+        },
+        filteredproductswithMax(max){
+            this.computeproducts(this.sort)
+            this.products=this.products.filter(p=>{
+                if(p.price<max) return true
+                return false
+            })
+
+        },
         showmore(){
             const store=useMyStore2()
             this.products=this.products.concat(store.moreproducts)
             this.isBtnShow=false
           
+        },
+        setMin(min){
+            this.min=min
+            
+        },
+         setMax(max){
+            this.max=max
         }
+         
     },
     mounted(){
 this.computeproducts(this.sort)
@@ -290,6 +321,15 @@ this.computeproducts(this.sort)
         sort(newvl){
             this.computeproducts(newvl)
             
+        },
+        min(newMin){
+            alert("hello")
+            this.filteredproductswithMin(newMin)
+
+        },
+        max(newMax){
+            this.filteredproductswithMax(newMax)
+
         }
     }
       

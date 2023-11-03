@@ -32,7 +32,7 @@
                     <div id="item1" class="collapse ">
                         <div class="input1">
                            <div class="value">
-                            <input type="text" placeholder="Min" v-model="min"><div class="op">-</div><input type="text" placeholder="Max" v-model="max">
+                            <input type="text" placeholder="Min" v-model="min" @change="sendMin"><div class="op">-</div><input type="text" placeholder="Max" v-model="max" @change="sendMax">
 
                            </div> 
                     
@@ -75,10 +75,19 @@
 <script>
 import { useMyStore2 } from '../store2';
 export default{
+    emits:['min','max'],
     data(){
 return{
 min :50,
-max:70
+max:999
+}
+    },
+    methods:{
+sendMin(){
+this.$emit('min',this.min)
+},
+sendMax(){
+   this.$emit('max',this.max) 
 }
     },
 computed:{
