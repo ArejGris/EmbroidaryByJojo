@@ -8,6 +8,8 @@ import AllCatigories from './pages/AllCatigories.vue'
 import OneCatigory from './pages/OneCatigory.vue'
 import AllProducts2 from './pages/AllProducts2.vue'
 import connectus from './pages/connectus.vue'
+import BeSeller from './pages/BeSeller.vue'
+import Blog from './pages/Blog.vue'
 const routes=[
     {
         path:'/',component:HomePage
@@ -37,7 +39,13 @@ const routes=[
      },
      {
         path:'/connect-us',component:connectus
-     }
+     },
+     {
+        path:'/be-seller',component:BeSeller
+     },
+     {
+      path:'/blog',component:Blog
+   }
 
 ]
 const router=createRouter({

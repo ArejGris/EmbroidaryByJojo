@@ -63,6 +63,10 @@ ul{
     list-style: none;
     padding-left: 0px;
 }
+ul li{
+padding: 1rem;
+
+}
 ul li:not(.last){
 cursor: pointer;
 text-align: left;
@@ -93,5 +97,8 @@ text-align: center;
     width: 80%;
     padding:10px;
     background-color:  rgb(255, 196, 0);
+}
+.fa{
+    cursor: pointer;
 }
 </style>

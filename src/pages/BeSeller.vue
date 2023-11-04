@@ -1,11 +1,17 @@
 <template>
-    <div class="divider"></div>
-    <section class="sec">
-        <img src="../assets/default-image-320x520.png" alt="">
-        <form>
-        
+    <section>
+        <div class="container">
+            <div class="thumb">
+                <img src="../assets/default-image-320x852.png" alt="">
+            </div>
+            <div class="card">
+                
+            <div class="contents">
+                <form>
         <h1>SIGN UP</h1>
         <p>Sign up to continue shopping</p>
+        <h1>Personal Information</h1>
+        <div class="divide"></div>
             <div class="form-group">
             <label ><i class="fa-regular fa-user"></i></label>
             <input type="text" placeholder="First Name"/>
@@ -18,6 +24,10 @@
             <label ><i class="fa-regular fa-envelope"></i></label>
             <input type="text" placeholder="Email"/>
            </div>
+           <div class="form-group">
+            <label ><img src="../assets/bd.png" alt=""></label>
+            <input type="text" placeholder="+893"/>
+           </div>
     
            <div class="form-group">
             <label ><span class="mdi mdi-name mdi-lock-outline"></span></label>
@@ -27,32 +37,41 @@
             <label ><span class="mdi mdi-name mdi-lock-outline"></span></label>
             <input type="text" placeholder="Password Confirmation"/>
            </div>
-          
-          
+           <h1>Shop Information</h1>
+        <div class="divide"></div>
+        <div class="form-group">
+            <label ><span class="mdi mdi-name mdi-shopping-outline"></span></label>
+            <input type="text" placeholder="shop name"/>
+           </div>
+           <div class="form-group">
+            <label ><span class="mdi mdi-name mdi-map-marker-outline"></span></label>
+            <input type="text" placeholder="shop Address"/>
+           </div>
            <div class="form-group"> 
             <button type="submit" class="btn btn-dark">SIGN UP</button>
            </div>
            <p>I have an account?<span><router-link to="/sign-in">sign in</router-link></span></p>
         </form>
-    </section>
-  
-    
-    
-    </template>
-    <style scoped>
-    .divider{
-        width: 100%;
-        height: 1px;
-        background-color: rgba(128, 128, 128, 0.144);
-    }
+            </div>
 
-    .sec{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 570px;
-    }
-    h1{
+            </div>
+           
+        </div>
+    </section>
+</template>
+<style scoped>
+.container{
+    display: flex;
+    justify-content: center;
+    
+}
+.divide{
+    height: 1px;
+    width: 100%;
+    background-color: gray;
+    margin: 10px 0px;
+}
+h1{
     font-size: 23px;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
@@ -62,15 +81,17 @@
         width: 320px;
     }
     .form-group label{
-        margin-right: -2rem;
         z-index: 1;
         position: relative;
     }
     .form-group input[type="text"]{
         border-color:rgba(128, 128, 128, 0.187) ;
-        width: 100%;
+        width: 90%;
         z-index: -1;
         padding-left: 2rem;
+    }
+    .mdi,i,img{
+        margin-right: -2rem;
     }
     a{
         text-decoration: none;
@@ -78,45 +99,12 @@
         font-family: 'Poppins' sans-serif;
         font-weight: 600;
     }
-    .f{width: 50%;
-        white-space: nowrap;
-        margin-left: 1rem;
-        display: inline-block;
+    @media screen and (max-width:769px) {
+        .thumb{
+            display: none;
+        }
+        .form-group{
+            width: 100%;
+        }
     }
-    i{
-        margin-right: 9px;
-    }
-    button{
-        width: 100%;
-        color: white;
-    }
-    .btn:hover{
-    background-color: rgb(255, 196, 0);
-}
-input[type="text"]{
-    border: 1px solid black;
-    padding: 5px 10px;
-    border-radius: 5px;
-    background-color: white;
-    color:black
-}
-form{
-    width: auto;
-    height: 520px;
-    padding: 3rem;
-    border-radius: 2px;
-    box-shadow: 0px 1px 1px rgba(0,0,0,.8);
-}
-@media screen and (min-width: 900px){
-    .form{
-        width:auto;
-    }
-}
-@media screen and (max-width:769px) {
-    img{
-       display: none;
-    }
-    
-}
-    </style>
-    
+</style>

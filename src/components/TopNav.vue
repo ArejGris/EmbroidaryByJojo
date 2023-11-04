@@ -21,7 +21,8 @@
 
             </li>
             <li>
-                Be A Seller
+                <router-link to="/be-seller">Be A Seller</router-link>
+                
             </li>
         </ul>
         <ul class="right-list ">
@@ -31,7 +32,7 @@
                 <span class="mdi mdi-name mdi-map-marker-outline"></span>Track Order
             </li>
             <li class="nav-item">Compare</li>
-            <li class="nav-item">Blog</li>
+            <li class="nav-item"><router-link to="/blog">Blog</router-link></li>
 
         </ul>
     </nav>
@@ -40,6 +41,7 @@
 a{
     text-decoration: none;
     color: black;
+    cursor: pointer;
 }
 .nav{
     height: 50px;

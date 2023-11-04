@@ -33,8 +33,8 @@
                               Pages
                                  </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                 <a class="dropdown-item" href="#">Blog</a>
-                                <a class="dropdown-item" href="#">About us</a>
+                                 <router-link class="dropdown-item" to="/blog">Blog</router-link>
+                                <router-link class="dropdown-item" to="about-us">About us</router-link>
                                 <router-link class="dropdown-item" to="/connect-us">Connect us</router-link>
                                  </div>
                       </div>

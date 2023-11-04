@@ -12,7 +12,7 @@
        
        </div>
        <div class="form-group">
-        <label ><i class="fa fa-lock"></i></label>
+        <label ><span class="mdi mdi-name mdi-lock-outline"></span></label>
         <input type="text" placeholder="Password"/>
        
        </div>
