@@ -2,7 +2,7 @@
     <section>
         <div class="container">
             <div class="row d-flex align-items-top">
-            <div class="col-md-4 col-lg-3 filter-area">
+            <div class="col-md-4 col-lg-3 filter-area mt-4 pl-0">
                
                 <SideList @min="setMin" @max="setMax" />
             
@@ -167,6 +167,9 @@ display: flex;
     overflow: hidden;
 
 }
+.products .list-icon h3{
+font-size: 23px;
+}
 .btn-show{
     text-transform: uppercase;
 }
@@ -177,7 +180,6 @@ display: flex;
     }
   .cardgrid{
     
-    grid-template-columns: repeat(3,1fr);
   }  
 }
 @media screen and (max-width: 530px) {
@@ -196,7 +198,6 @@ display: flex;
     }
   .cardgrid{
     
-    grid-template-columns: repeat(2,.4fr);
   }  
 }
 .top{

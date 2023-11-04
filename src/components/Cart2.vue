@@ -83,7 +83,7 @@ this.show=value
 <style scoped>
 .card{
     padding:15px;
-    width: 230px;
+    max-width: 230px;
 margin-bottom: .7rem;
 border: 1px solid rgba(128, 128, 128, 0.103);
 }
@@ -144,6 +144,9 @@ padding: 5px;
     width: 100px;
     top:7%;
     left: 3%;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
 }
 img{
     transition: all .5s ease-in-out;

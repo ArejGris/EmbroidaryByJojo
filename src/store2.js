@@ -2770,7 +2770,195 @@ export const useMyStore2=defineStore('myStore',{
                     "is_catalog": false,
                     "is_classified": false
                 }
-            ]
+            ],
+             related_products2: [
+                {
+                    "id": 2,
+                    "slug": "product-1-zrwow",
+                    "category_id": 11,
+                    "product_name": "product 1",
+                    "special_discount_type": "",
+                    "special_discount_check": 0,
+                    "discount_percentage": 0,
+                    "image_190x230": "https:\/\/www.embroiderybyjojo.com\/public\/images\/20230913163829image_190x230-418.png",
+                    "image_40x40": "https:\/\/www.embroiderybyjojo.com\/public\/images\/20230913163046image_40x40_media_393.jpg",
+                    "is_approved": 1,
+                    "price": 100,
+                    "status": "published",
+                    "rating": 0,
+                    "reviews_count": 0,
+                    "current_stock": 0,
+                    "reward": 0,
+                    "minimum_order_quantity": 1,
+                    "todays_deal": 1,
+                    "has_variant": false,
+                    "user_wishlist": false,
+                    "is_catalog": false,
+                    "is_classified": false,
+                    "stock": [
+                        {
+                            "stock_variant": "",
+                            "current_stock": 0,
+                            "has_variant": false
+                        }
+                    ]
+                },
+                {
+                    "id": 104,
+                    "slug": "product-100-tbgyo",
+                    "category_id": 11,
+                    "product_name": "product 100",
+                    "special_discount_type": "",
+                    "special_discount_check": 0,
+                    "discount_percentage": 0,
+                    "image_190x230": "https:\/\/www.embroiderybyjojo.com\/public\/images\/20230914152214image_190x230-185.png",
+                    "image_40x40": "https:\/\/www.embroiderybyjojo.com\/public\/images\/20230914152143image_40x40_media_287.jpg",
+                    "is_approved": 1,
+                    "price": 100,
+                    "status": "published",
+                    "rating": 0,
+                    "reviews_count": 0,
+                    "current_stock": 0,
+                    "reward": 0,
+                    "minimum_order_quantity": 35,
+                    "todays_deal": 1,
+                    "has_variant": false,
+                    "user_wishlist": false,
+                    "is_catalog": false,
+                    "is_classified": false,
+                    "stock": [
+                        {
+                            "stock_variant": "",
+                            "current_stock": 0,
+                            "has_variant": false
+                        }
+                    ]
+                },
+                {
+                    "id": 105,
+                    "slug": "product-101-kdtl8",
+                    "category_id": 11,
+                    "product_name": "product 101",
+                    "special_discount_type": "",
+                    "special_discount_check": 0,
+                    "discount_percentage": 0,
+                    "image_190x230": "https:\/\/www.embroiderybyjojo.com\/public\/images\/20230914152328image_190x230-436.png",
+                    "image_40x40": "https:\/\/www.embroiderybyjojo.com\/public\/images\/20230914152302image_40x40_media_366.jpg",
+                    "is_approved": 1,
+                    "price": 100,
+                    "status": "published",
+                    "rating": 0,
+                    "reviews_count": 0,
+                    "current_stock": 0,
+                    "reward": 0,
+                    "minimum_order_quantity": 33,
+                    "todays_deal": 1,
+                    "has_variant": false,
+                    "user_wishlist": false,
+                    "is_catalog": false,
+                    "is_classified": false,
+                    "stock": [
+                        {
+                            "stock_variant": "",
+                            "current_stock": 0,
+                            "has_variant": false
+                        }
+                    ]
+                },
+                {
+                    "id": 107,
+                    "slug": "product-103-lvj59",
+                    "category_id": 11,
+                    "product_name": "product 103",
+                    "special_discount_type": "",
+                    "special_discount_check": 0,
+                    "discount_percentage": 0,
+                    "image_190x230": "https:\/\/www.embroiderybyjojo.com\/public\/images\/20230914152624image_190x230-314.png",
+                    "image_40x40": "https:\/\/www.embroiderybyjojo.com\/public\/images\/20230914152558image_40x40_media_338.jpg",
+                    "is_approved": 1,
+                    "price": 100,
+                    "status": "published",
+                    "rating": 0,
+                    "reviews_count": 0,
+                    "current_stock": 0,
+                    "reward": 0,
+                    "minimum_order_quantity": 66,
+                    "todays_deal": 1,
+                    "has_variant": false,
+                    "user_wishlist": false,
+                    "is_catalog": false,
+                    "is_classified": false,
+                    "stock": [
+                        {
+                            "stock_variant": "",
+                            "current_stock": 0,
+                            "has_variant": false
+                        }
+                    ]
+                },
+                {
+                    "id": 108,
+                    "slug": "product-104-an8wl",
+                    "category_id": 11,
+                    "product_name": "product 104",
+                    "special_discount_type": "",
+                    "special_discount_check": 0,
+                    "discount_percentage": 0,
+                    "image_190x230": "https:\/\/www.embroiderybyjojo.com\/public\/images\/20230914152747image_190x230-74.png",
+                    "image_40x40": "https:\/\/www.embroiderybyjojo.com\/public\/images\/20230914152710image_40x40_media_417.jpg",
+                    "is_approved": 1,
+                    "price": 100,
+                    "status": "published",
+                    "rating": 0,
+                    "reviews_count": 0,
+                    "current_stock": 0,
+                    "reward": 0,
+                    "minimum_order_quantity": 22,
+                    "todays_deal": 1,
+                    "has_variant": false,
+                    "user_wishlist": false,
+                    "is_catalog": false,
+                    "is_classified": false,
+                    "stock": [
+                        {
+                            "stock_variant": "",
+                            "current_stock": 0,
+                            "has_variant": false
+                        }
+                    ]
+                },
+                {
+                    "id": 109,
+                    "slug": "product-105-1e8u3",
+                    "category_id": 11,
+                    "product_name": "product 105",
+                    "special_discount_type": "",
+                    "special_discount_check": 0,
+                    "discount_percentage": 0,
+                    "image_190x230": "https:\/\/www.embroiderybyjojo.com\/public\/images\/20230914152857image_190x230-366.png",
+                    "image_40x40": "https:\/\/www.embroiderybyjojo.com\/public\/images\/20230914152828image_40x40_media_442.jpg",
+                    "is_approved": 1,
+                    "price": 100,
+                    "status": "published",
+                    "rating": 0,
+                    "reviews_count": 0,
+                    "current_stock": 0,
+                    "reward": 0,
+                    "minimum_order_quantity": 38,
+                    "todays_deal": 1,
+                    "has_variant": false,
+                    "user_wishlist": false,
+                    "is_catalog": false,
+                    "is_classified": false,
+                    "stock": [
+                        {
+                            "stock_variant": "",
+                            "current_stock": 0,
+                            "has_variant": false
+                        }
+                    ]
+                }
+            ],
         
     })
 })

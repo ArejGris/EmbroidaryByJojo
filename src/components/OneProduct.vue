@@ -195,7 +195,8 @@
         data(){
             return{
                 page:false,
-                price:37
+                price:37,
+                productSource:1
             }
         },
         mounted(){
@@ -223,25 +224,40 @@
                 let p=products.find(prod=>
                 prod.id==this.id)
                 if(!p){
+                    products=store.moreproducts
+                 p=products.find(prod=>
+                prod.id==this.id)
+                this.productSource=2
+    
+                }
+                if(!p){
                     products=store.related_products
                  p=products.find(prod=>
                 prod.id==this.id)
+    
+                }
+
+                if(!p){
+                    products=store.related_products2
+                 p=products.find(prod=>
+                prod.id==this.id)
+                
+                this.productSource=2
     
                 }
                 return p
             },
             relatedProduct(){
                 const store=useMyStore2()
-                const products=store.allproducts
-                const catigory_id=this.product.category_id
-              
-                const relatedProduct=products.filter(prod=> prod.category_id===catigory_id)
-                return relatedProduct
+                const products=store.related_products2
             }
             ,
             relatedProduct2(){
                 const store=useMyStore2()
-                return store.related_products
+                let p= store.related_products
+                if(this.productSource==2)
+                p=store.related_products2
+            return p
             }
         }
     }
