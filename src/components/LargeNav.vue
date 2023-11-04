@@ -35,7 +35,7 @@
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                  <a class="dropdown-item" href="#">Blog</a>
                                 <a class="dropdown-item" href="#">About us</a>
-                                <a class="dropdown-item" href="#">Connect us</a>
+                                <router-link class="dropdown-item" to="/connect-us">Connect us</router-link>
                                  </div>
                       </div>
                     </li>
