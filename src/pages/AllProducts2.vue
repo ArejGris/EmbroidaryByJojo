@@ -323,7 +323,6 @@ this.computeproducts(this.sort)
             
         },
         min(newMin){
-            alert("hello")
             this.filteredproductswithMin(newMin)
 
         },

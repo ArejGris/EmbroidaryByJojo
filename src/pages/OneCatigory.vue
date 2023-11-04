@@ -4,7 +4,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-4 col-lg-3 gap1">
-           <SideList/>
+           <SideList @min="setMin" @max="setMax"/>
 
         </div>
         <div class="col-md-8 col-lg-9">
@@ -85,6 +85,8 @@ data(){
 return{
     isBtnShow:true,
     sort:1,
+    min:0,
+    max:999,
     showlist:true,
     products:[]
 }
@@ -119,6 +121,28 @@ this.isBtnShow=false
             p=products.sort((a,b)=>{return (Number(b.id)- Number(a.id))})}
          this.products=p
 
+        },
+        setMax(max){
+            this.max=max
+        },
+        setMin(min){
+            this.min=min
+        },
+        filteredproductWithMin(min){
+            this.computeproducts(this.sort)
+            this.products=this.products.filter(p=>{
+                if(p.price>min) return true
+                return false
+            })
+
+        },
+        filteredproductWithMax(max){
+            this.computeproducts(this.sort)
+            this.products=this.products.filter(p=>{
+                if(p.price<max) return true
+                return false
+            })
+
         }
     },
     mounted(){
@@ -128,6 +152,13 @@ this.computeproducts(this.sort)
         sort(newvl){
             this.computeproducts(newvl)
             
+        },
+        min(newMin){
+            this.filteredproductWithMin(newMin)
+
+        },
+        max(newMax){
+            this.filteredproductWithMax(newMax)
         }
     }
       
