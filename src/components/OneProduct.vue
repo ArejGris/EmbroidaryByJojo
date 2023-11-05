@@ -199,16 +199,24 @@
                 productSource:1
             }
         },
-        mounted(){
-    
-        },
+       
         methods:{
+            setCurrent(id){
+                
+    const store=useMyStore2()
+    store.setCurrent(id)
+    console.log(store.currentProduct)
+
+            },
     addPrice(){
     this.price++
     },
     absPrice(){
         this.price--
     }
+        },
+         mounted(){
+            this.setCurrent(this.id)
         },
         computed:{
             products(){
@@ -247,17 +255,18 @@
                 }
                 return p
             },
-            relatedProduct(){
-                const store=useMyStore2()
-                const products=store.related_products2
-            }
-            ,
             relatedProduct2(){
                 const store=useMyStore2()
                 let p= store.related_products
                 if(this.productSource==2)
                 p=store.related_products2
             return p
+            }
+        },
+        watch:{
+            id(newId){
+                this.setCurrent(newId)
+
             }
         }
     }

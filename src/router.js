@@ -10,6 +10,9 @@ import AllProducts2 from './pages/AllProducts2.vue'
 import connectus from './pages/connectus.vue'
 import BeSeller from './pages/BeSeller.vue'
 import Blog from './pages/Blog.vue'
+import compare from './pages/compare.vue'
+import seller from './pages/seller.vue'
+import aboutus from './pages/aboutus.vue'
 const routes=[
     {
         path:'/',component:HomePage
@@ -46,7 +49,16 @@ const routes=[
      {
       path:'/blog',component:Blog
    }
-
+   ,
+   {
+    path:'/compare',component:compare
+ },
+ {
+   path:'/seller',component:seller
+},
+{
+   path:'/aboutus',component:aboutus
+}
 ]
 const router=createRouter({
     history:createWebHistory(),

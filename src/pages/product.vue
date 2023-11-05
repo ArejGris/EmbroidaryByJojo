@@ -98,19 +98,19 @@ props:['products','page','x'],
                { breakpoint: 1024,
                 settings: { 
                     slidesToShow: 4,
-                    slidesToScroll: 2,
+                    slidesToScroll: 4,
 
                 }},
                 { breakpoint: 768,
                 settings: { 
                     slidesToShow: 3,
-                    slidesToScroll: 2,
+                    slidesToScroll: 3,
 
                 }},
                 { breakpoint: 480,
                 settings: { 
                     slidesToShow: 2,
-                    slidesToScroll: 1,
+                    slidesToScroll: 2,
 
                 }}
             ]
@@ -161,23 +161,32 @@ a{
   font-weight: 600;
   margin-right: 1rem;
   white-space: nowrap;
+  margin-bottom: 0px;
 }
 .t2{
   color: rgba(0, 0, 0, 0.548);
+  white-space: nowrap;
 }
 .t2:hover{
   color: red;
+}
+
+.t2{
+  margin-left: auto;
+
+  text-align: right;
+  align-self: flex-end;
 }
 @media screen and (min-width:1400px) {
   .t1{
   margin-left: 25px;
 }
 }
-.t2{
-  margin-left: auto;
+@media screen and (max-width:400px) {
+  .t1{
 
-  text-align: right;
-  align-self: flex-end;
+  font-size: 16px;
+}
 }
 </style>
 

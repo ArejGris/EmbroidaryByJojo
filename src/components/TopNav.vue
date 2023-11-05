@@ -31,7 +31,7 @@
             <li class="nav-item">
                 <span class="mdi mdi-name mdi-map-marker-outline"></span>Track Order
             </li>
-            <li class="nav-item">Compare</li>
+            <li class="nav-item"><router-link to="/compare">Compare</router-link></li>
             <li class="nav-item"><router-link to="/blog">Blog</router-link></li>
 
         </ul>
@@ -42,6 +42,7 @@ a{
     text-decoration: none;
     color: black;
     cursor: pointer;
+    white-space: nowrap;
 }
 .nav{
     height: 50px;
@@ -57,6 +58,7 @@ ul{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 
 ul li{

@@ -13,7 +13,7 @@
         </div>
      <div class="icon-list">
         <ul class="mdi-icons">
-            <li class="hide1"><img src="../assets/compare.svg" alt=""></li>
+            <li class="hide1"><router-link to="/compare"><img src="../assets/compare.svg" alt=""></router-link></li>
             <li class="hide2"><img src="../assets/heart.svg" alt=""></li>
             <li class="hide2"><img src="../assets/bag.svg" alt=""></li>
             <li>
@@ -46,6 +46,9 @@ export default{
 
 </script>
 <style scoped>
+a{
+    text-decoration: none;
+}
 .nav{
     display: flex;
     align-items: center;

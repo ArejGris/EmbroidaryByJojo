@@ -1,6 +1,6 @@
 <template>
     <section class="footer">
-    <div class="container">
+    <div class="container-fluid">
 
         <div class="row">
             <div class="col-12 img-c">
@@ -12,15 +12,16 @@
             <div class="col-sm-6 col-md-6 col-lg-2 col-xl-2">
                 <ul>
                     <li><h5>Seller Options</h5></li>
-                    <li>Login as Seller</li>
-                    <li>Sign up as Seller</li>
+                    <li><router-link to="/sign-in">Login as Seller</router-link></li>
+                    <li><router-link to="/register">Sign up as Seller
+                    </router-link></li>
                 </ul>
             </div>
             <div class="col-sm-6 col-md-6 col-lg-2 col-xl-2">
                 <ul>
                     <li><h5>My Account</h5></li>
-                    <li>login</li>
-                    <li>create account</li>
+                    <li><router-link to="/sign-in">login</router-link></li>
+                    <li><router-link to="/register">create account</router-link></li>
                 </ul>
             </div>
             <div class="col-sm-6 col-md-6 col-lg-2 col-xl-2">
@@ -28,7 +29,7 @@
                     <li><h5>Useful Links</h5></li>
                     <li>Latest News</li>
                     <li>Browse All Product</li>
-                    <li>Browse All Catigoryt</li>
+                    <li>Browse All Categories</li>
                     <li>Browse All Brands</li>
                     <li>Terms&Conditions</li>
                     <li>Privacy Policy</li>
@@ -52,10 +53,10 @@
     <ul class="list8">
         <li><router-link to="/">Home</router-link></li>
         <li><router-link to="/catigories">All Catigories</router-link></li>
-        <li><router-link to="/">All Brands</router-link></li>
+        <li><router-link to="/all-brand">All Brands</router-link></li>
         <li><router-link to="/products">All products</router-link></li>
-        <li><router-link to="/">Blogs</router-link></li>
-        <li><router-link to="/">Campaigns</router-link></li>
+        <li><router-link to="/blog">Blogs</router-link></li>
+        <li><router-link to="/compign">Campaigns</router-link></li>
     </ul>
 <div class="divider"></div>
 <p>©2023 All Rights Reserved.</p>
@@ -104,6 +105,8 @@ ul li{
     color: white;
     transition: all .5s ease-in-out;
     cursor: pointer;
+    margin: 1rem 0px;
+    white-space: nowrap;
 }
 ul li:hover{
     color: rgb(255, 38, 0);
@@ -118,6 +121,7 @@ ul li i{
     margin-left: 4rem;
     font-size: 13px;
     margin-top: 10px;
+    width:300px
 }
 .about span{
     font-size: 18px;
@@ -181,5 +185,9 @@ p{
     .about{
         margin-left: 2rem;
     }
+}
+a{
+    text-decoration: none;
+    color:white
 }
 </style>

@@ -1,6 +1,7 @@
 import { defineStore } from "pinia";
 export const useMyStore2=defineStore('myStore',{
     state:()=>({
+        currentProduct:136,
         allproducts: [
             {
                 "id": 136,
@@ -2960,5 +2961,11 @@ export const useMyStore2=defineStore('myStore',{
                 }
             ],
         
-    })
+    }),
+    actions:{
+        setCurrent(id){
+            this.currentProduct=id
+        }
+    }
+     
 })

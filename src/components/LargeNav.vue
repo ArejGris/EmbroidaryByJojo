@@ -25,7 +25,7 @@
                         <router-link to="/" class="nav-link" href="#">Compaigns</router-link>
                     </li> 
                     <li class="nav-item">
-                        <router-link to="/" class="nav-link" href="#">Sellers</router-link>
+                        <router-link to="/seller" class="nav-link" >Sellers</router-link>
                     </li>
                     <li>
                         <div class="dropdown">
@@ -34,7 +34,7 @@
                                  </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                  <router-link class="dropdown-item" to="/blog">Blog</router-link>
-                                <router-link class="dropdown-item" to="about-us">About us</router-link>
+                                <router-link class="dropdown-item" to="/aboutus">About us</router-link>
                                 <router-link class="dropdown-item" to="/connect-us">Connect us</router-link>
                                  </div>
                       </div>

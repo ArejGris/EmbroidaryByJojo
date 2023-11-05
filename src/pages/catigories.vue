@@ -1,5 +1,6 @@
 <template>
-<div class="container">
+    <section>
+        <div class="container">
     <div class="row ">
         <div class="col-lg-3  hide">
            <div class="sidebar">
@@ -18,26 +19,45 @@
 
         </div>
         <div class=" col-lg-9">
-            <div class="row d-flex justify-content-center align-items-center" >
-        <div class="col-12">
+            <div class="row " >
+        <div class="col-lg-12">
             <div class="img">
                 <img src="../assets/default-image-970x400.png" alt="">
             </div>
         </div>
-        <div class="col-6 col-md-3 col-lg-3"><div class="img"><img src="../assets/default-image-220x125.png" alt=""></div></div>
-        <div class="col-6 col-md-3 col-lg-3"><div class="img"><img src="../assets/default-image-220x125.png" alt=""></div></div>
-        <div class="col-6 col-md-3 col-lg-3"><div class="img"><img src="../assets/default-image-220x125.png" alt=""></div></div>
-        <div class="col-6 col-md-3 col-lg-3"><div class="img"><img src="../assets/default-image-220x125.png" alt=""></div></div>
-    </div>
+        <div class="col-lg-12">
+            <div class="sec-banner">
+                
+            <div class="banner">
+                
+                <a href="" class="banner-item"><img src="../assets/default-image-220x125.png" alt=""></a>
+                <a href="" class="banner-item"><img src="../assets/default-image-220x125.png" alt=""></a>
+                <a href="" class="banner-item"><img src="../assets/default-image-220x125.png" alt=""></a>
+                <a href="" class="banner-item"><img src="../assets/default-image-220x125.png" alt=""></a>
+    
+                </div>
+
+            </div>
+        </div>
+       </div>
 
         </div>
         
-        <div class="col-lg-6 col-md-12 col-sm-12 two"><div class="img"><img src="../assets/default-image-620x320.png" alt=""></div></div>
-        <div class="col-lg-6 col-md-12 col-sm-12 two"><div class="img"><img src="../assets/default-image-620x320.png" alt=""></div></div>
-    </div>
+       </div>
     
     
 </div>
+    </section>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 two"><div class="img"><img src="../assets/default-image-620x320.png" alt=""></div></div>
+        <div class=" col-md-6 two"><div class="img"><img src="../assets/default-image-620x320.png" alt=""></div></div>
+    
+        </div>
+    </div>
+</section>
 </template>
 <script >
 import { useMyStore2 } from '../store2';
@@ -66,7 +86,7 @@ ul{
     justify-content: center;
     
 }
-img{
+.img img{
     width: 100%;
     height: 100%;
 }
@@ -79,12 +99,8 @@ img{
     margin-bottom: 1rem;
 }
 .col-12,.col-6{
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 10px;
+ 
+    padding: 10px; 
 }
 .col-6{
     margin-bottom: 1rem;
@@ -96,6 +112,21 @@ img{
 
 .col-6{
     margin-top: 10px;
+}
+.sec-banner{
+    margin-top: 16px;
+}
+.banner{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: flex-start;
+}
+.banner-item{
+    
+    flex: 0 0 48%;
+    overflow-x: hidden;
+    max-width: 48%;
 }
 .browser{
     display: flex;
@@ -148,10 +179,7 @@ img{
     .col-6{
     height: 100px;
 }
-.col-12{
-    height: 200px;
-    width: 100vw;
-}
+
 
 }
 .sidebar{
