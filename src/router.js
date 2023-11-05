@@ -12,7 +12,7 @@ import BeSeller from './pages/BeSeller.vue'
 import Blog from './pages/Blog.vue'
 import compare from './pages/compare.vue'
 import seller from './pages/seller.vue'
-import aboutus from './pages/aboutus.vue'
+import AboutUs from './pages/AboutUs.vue'
 const routes=[
     {
         path:'/',component:HomePage
@@ -57,7 +57,7 @@ const routes=[
    path:'/seller',component:seller
 },
 {
-   path:'/aboutus',component:aboutus
+   path:'/aboutus',component:AboutUs
 }
 ]
 const router=createRouter({

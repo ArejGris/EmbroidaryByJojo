@@ -86,7 +86,7 @@ ul{
     justify-content: center;
     
 }
-.img img{
+img{
     width: 100%;
     height: 100%;
 }
@@ -123,10 +123,37 @@ ul{
     justify-content: flex-start;
 }
 .banner-item{
+    flex: 0 0 220px;
+    max-width: 220px;
+    overflow-x: hidden;
+} 
+@media screen and (max-width:767px){
+    .banner-item{
     
     flex: 0 0 48%;
     overflow-x: hidden;
     max-width: 48%;
+}
+   
+}
+@media screen and (max-width:500px){
+    .banner{
+        gap:12px
+    }
+}
+@media (max-width: 350px){
+    .banner{
+        gap: 10px;
+    }
+ .banner-item {
+    flex: 0 0 47%;
+    overflow-x: hidden;
+    max-width: 47%;
+}}
+@media screen and (min-width:1000px){
+    .banner{
+        justify-content: space-between;
+    }
 }
 .browser{
     display: flex;
