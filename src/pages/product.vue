@@ -39,6 +39,9 @@ h6{
 
 .slick-track{
 }
+.slick-slider1 .slick-list{
+  transform: translateX(-10px);
+}
   .slick-slider1{
     display: flex;
     overflow: hidden;

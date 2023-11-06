@@ -21,10 +21,10 @@
             </li>
             <li>
                 <div class="form-group search-form">
-                    <form action="">
+                    
                         <input type="text" />
                         <button type="submit" class="btn btn-dark"><span class="mdi mdi-name mdi-magnify"></span></button>
-                    </form>
+                  
                   </div>
             </li>
             <li >

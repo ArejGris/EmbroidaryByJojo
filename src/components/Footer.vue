@@ -13,7 +13,7 @@
                 <ul>
                     <li><h5>Seller Options</h5></li>
                     <li><router-link to="/sign-in">Login as Seller</router-link></li>
-                    <li><router-link to="/register">Sign up as Seller
+                    <li><router-link to="/be-seller">Sign up as Seller
                     </router-link></li>
                 </ul>
             </div>
