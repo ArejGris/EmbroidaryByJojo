@@ -45,7 +45,16 @@ export default{
         productImg(){
             const store=useMyStore2()
             const currentid=store.currentProduct
-            const p=store.allproducts.find(p=>p.id==currentid)
+            let p=store.allproducts.find(p=>p.id==currentid)
+            if(!p)
+            p=store.moreproducts.find(p=>p.id==currentid)
+        if(!p)
+        p=store.related_products.find(p=>p.id==currentid)
+    if(!p)
+    p=store.related_products2.find(p=>p.id==currentid)
+if(!p)
+p=store.allproducts.find(p=>p.id==2)
+
 
 return p
 

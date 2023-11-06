@@ -253,7 +253,7 @@ export default{
 data(){
 return{
     isBtnShow:true,
-    showlist:true,
+    showlist:false,
   sort:1,
   min:50,
   max:999,

@@ -242,6 +242,8 @@
                     products=store.related_products
                  p=products.find(prod=>
                 prod.id==this.id)
+                console.log(this.productSource)
+                this.productSource=1
     
                 }
 

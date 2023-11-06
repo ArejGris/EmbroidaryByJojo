@@ -84,6 +84,7 @@ this.show=value
 .card{
     padding:15px;
     max-width: 230px;
+    width: 200px;
 margin-bottom: .7rem;
 border: 1px solid rgba(128, 128, 128, 0.103);
 }

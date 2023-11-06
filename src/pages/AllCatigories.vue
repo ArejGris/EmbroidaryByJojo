@@ -2,7 +2,7 @@
     
         <div class="title"><h3>All Catigories</h3></div>
     <div class="divider"> </div>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row " >
             <div class="col col-lg-4 col-md-6 " v-for="cat in catigories" :key="cat.id">
                 <div class="card d-flex">

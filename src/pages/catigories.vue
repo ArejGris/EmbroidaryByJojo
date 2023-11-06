@@ -123,8 +123,8 @@ img{
     justify-content: flex-start;
 }
 .banner-item{
-    flex: 0 0 220px;
-    max-width: 220px;
+    flex: 0 0 23%;
+    max-width: 23%;
     overflow-x: hidden;
 } 
 @media screen and (max-width:767px){
