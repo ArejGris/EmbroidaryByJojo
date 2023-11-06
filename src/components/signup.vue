@@ -54,6 +54,7 @@ img{
 }
 .form-group{
     margin-bottom: 2rem;
+    text-align: left;
 }
 .form-group label{
     margin-right: -2rem;
@@ -98,16 +99,14 @@ i{
         margin-right: 9px;
     }
 .form{
-    width: auto;
+    width:400px;
     height: 520px;
     padding: 3rem;
     border-radius: 3px;
     box-shadow: 0px 1px 1px rgba(0,0,0,.8);
 }
 @media screen and (min-width:900px) {
-    .form{
-        width:40%;
-    }
+   
     
 }
 @media screen and (max-width:769px) {

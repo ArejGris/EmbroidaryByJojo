@@ -72,7 +72,7 @@ a img{
            <a class="nav-link" @click="sendaction(2)"><img src="../assets/menu.svg" alt=""></a>
        </li>
        <li class="nav-item">
-           <a class="nav-link"><img src="../assets/shopping-bag.svg" alt=""></a>
+           <router-link class="nav-link" to="/cart"><img src="../assets/shopping-bag.svg" alt=""></router-link>
        </li>
        <li class="nav-item">
            <router-link class="nav-link" to="/sign-in"><img src="../assets/user.svg" alt=""></router-link>

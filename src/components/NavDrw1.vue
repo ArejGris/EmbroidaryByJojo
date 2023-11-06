@@ -19,15 +19,15 @@
             </li>
             
             <li>
-                <router-link to="">Brand</router-link>
+                <router-link to="/brand">Brand</router-link>
             </li>
             
             <li>
-                <router-link to="">Campaigns</router-link>
+                <router-link to="/">Campaigns</router-link>
             </li>
             
             <li>
-                <router-link to="">Sellers</router-link>
+                <router-link to="/seller">Sellers</router-link>
             </li>
             
             <li>
@@ -36,9 +36,9 @@
                               Pages
                                  </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                 <a class="dropdown-item" href="#">Blog</a>
-                                <a class="dropdown-item" href="#">About us</a>
-                                <a class="dropdown-item" href="#">Connect us</a>
+                                 <router-link class="dropdown-item" to="/blog">Blog</router-link>
+                                <router-link class="dropdown-item" to="/aboutus">About us</router-link>
+                                <router-link class="dropdown-item" to="/connect-us">Connect us</router-link>
   
                          </div>
                       </div>

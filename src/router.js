@@ -13,6 +13,11 @@ import Blog from './pages/Blog.vue'
 import compare from './pages/compare.vue'
 import seller from './pages/seller.vue'
 import AboutUs from './pages/AboutUs.vue'
+import Brand from './pages/Brand.vue'
+import privacy from './pages/privacy.vue'
+import refund from './pages/refund.vue'
+import term from './pages/term.vue'
+import cartpage from './pages/cartpage.vue'
 const routes=[
     {
         path:'/',component:HomePage
@@ -58,6 +63,22 @@ const routes=[
 },
 {
    path:'/aboutus',component:AboutUs
+},
+{
+   path:'/brand',component:Brand
+},
+{
+   path:'/privacy',component:privacy
+},
+{
+   path:'/refund',component:refund
+},
+{
+   path:'/term',component:term
+}
+,
+{
+   path:'/cart',component:cartpage
 }
 ]
 const router=createRouter({

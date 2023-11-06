@@ -107,15 +107,31 @@ form{
     border-radius: 2px;
     box-shadow: 0px 1px 1px rgba(0,0,0,.8);
 }
+p{
+    white-space: nowrap;
+}
 @media screen and (min-width: 900px){
     .form{
         width:auto;
     }
 }
 @media screen and (max-width:769px) {
+    form{
+        padding: 1rem;
+    }
     img{
        display: none;
     }
+    
+}
+@media screen and (max-width:369px) {
+   form{
+    width: 300px;
+    padding: 10px;
+   }
+   .form-group{
+    width: 100%;
+   }
     
 }
     </style>

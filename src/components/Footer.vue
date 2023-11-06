@@ -27,13 +27,13 @@
             <div class="col-sm-6 col-md-6 col-lg-2 col-xl-2">
                 <ul>
                     <li><h5>Useful Links</h5></li>
-                    <li>Latest News</li>
-                    <li>Browse All Product</li>
-                    <li>Browse All Categories</li>
-                    <li>Browse All Brands</li>
-                    <li>Terms&Conditions</li>
-                    <li>Privacy Policy</li>
-                    <li>Refund Policy</li>
+                    <li><router-link to="/blog">Latest News</router-link></li>
+                    <li><router-link to="/products">Browse All Product</router-link></li>
+                    <li><router-link to="/catigories">Browse All Categories</router-link></li>
+                    <li><router-link to="/brand">Browse All Brands</router-link></li>
+                    <li><router-link to="/term">Terms&Conditions</router-link></li>
+                    <li><router-link to="/privacy">Privacy Policy</router-link></li>
+                    <li><router-link to="/refund">Refund Policy</router-link></li>
                 </ul>
             </div>
             <div class="col-sm-6 col-md-6 col-lg-2 col-xl-2">
@@ -179,6 +179,9 @@ p{
 .col-12{
 }
 @media screen and (max-width:767px){
+    .container-fluid{
+        margin-left: 0px;
+    }
     .list li{
         margin-left: 0;
     }
